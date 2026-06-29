@@ -158,8 +158,8 @@ window.MaisonTubConfig = {
             shortTitle: 'Compact Options',
             url: 'compact-walk-in-tub-options.html',
             icon: 'maximize-2',
-            image: 'assets/images/service-4.jpg',
-            heroImage: 'assets/images/hero-compact.jpg',
+            image: 'assets/images/card-4.jpg',
+            heroImage: 'assets/images/service-4.jpg',
             description:
                 'Compare participating provider options for smaller bathrooms, tighter layouts, and walk-in tub models that may fit compact spaces.',
             badge: 'Space saving',

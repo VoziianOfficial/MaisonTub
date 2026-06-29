@@ -170,7 +170,7 @@
                     ['Final provider terms', 'Pricing, scheduling, warranties, product details, and agreements come from providers.', 'file-text']
                 ]
             ],
-            comparisonPhoto: 'assets/images/service-4.jpg',
+            comparisonPhoto: 'assets/images/card-9.jpg',
             faq: [
                 ['Does MaisonTub sell compact walk-in tubs?', 'No. MaisonTub does not sell, install, replace, repair, inspect, manufacture, or directly provide walk-in tubs.'],
                 ['What should I include for a compact request?', 'Include bathroom dimensions, doorway or hallway limitations, current tub layout, access preferences, and desired features.'],

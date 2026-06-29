@@ -1,10 +1,3 @@
-/**
- * @license lucide v1.22.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -15854,7 +15847,7 @@
     ["line", { x1: "8", x2: "14", y1: "11", y2: "11" }]
   ];
 
-  var iconAndAliases = /*#__PURE__*/Object.freeze({
+  var iconAndAliases = Object.freeze({
     __proto__: null,
     AArrowDown: AArrowDown,
     AArrowUp: AArrowUp,
@@ -19883,4 +19876,3 @@
   exports.icons = iconAndAliases;
 
 }));
-//# sourceMappingURL=lucide.js.map

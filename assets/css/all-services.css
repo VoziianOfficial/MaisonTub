@@ -1,15 +1,6 @@
-/* ==============================
-   ALL SERVICES PAGE
-   Page-specific styles only
-================================= */
-
 .all-services-main .service-nav-strip {
     padding-top: 142px;
 }
-
-/* ==============================
-   2. SERVICE CATEGORY NAVIGATION STRIP
-================================= */
 
 .service-nav-strip {
     background: var(--color-white);
@@ -103,10 +94,6 @@
     height: 28px;
 }
 
-/* ==============================
-   3. ALL WALK-IN TUB SERVICE CATEGORIES
-================================= */
-
 .service-categories {
     background: var(--color-off-white);
 }
@@ -191,7 +178,6 @@
 .category-item__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 26px 0;
 }
 
@@ -240,10 +226,6 @@
     height: 18px;
     color: var(--color-gold);
 }
-
-/* ==============================
-   4. FEATURED SERVICE SHOWCASE
-================================= */
 
 .featured-showcase {
     background: var(--color-white);
@@ -389,10 +371,6 @@
     font-weight: 800;
 }
 
-/* ==============================
-   5. WHICH OPTION FITS YOUR PROJECT?
-================================= */
-
 .option-fit {
     background: var(--color-off-white);
 }
@@ -439,10 +417,6 @@
     height: 21px;
     color: var(--color-teal);
 }
-
-/* ==============================
-   6. MATCHING FACTORS
-================================= */
 
 .matching-factors {
     background: var(--color-white);
@@ -530,10 +504,6 @@
     margin-top: 18px;
 }
 
-/* ==============================
-   7. DARK AGGREGATOR CLARIFICATION
-================================= */
-
 .aggregator-clarification {
     background: var(--color-dark);
     color: var(--color-white);
@@ -599,10 +569,6 @@
     font-size: 0.94rem;
 }
 
-/* ==============================
-   8. SERVICES FAQ TWIST
-================================= */
-
 .services-faq .faq-thought {
     border-left-color: var(--color-gold);
 }
@@ -614,10 +580,6 @@
 .services-faq .faq-item.is-open .faq-question svg {
     color: var(--color-teal);
 }
-
-/* ==============================
-   RESPONSIVE
-================================= */
 
 @media (max-width: 1180px) {
     .factor-grid {

@@ -1,15 +1,6 @@
-/* ==============================
-   ABOUT PAGE
-   Page-specific styles only
-================================= */
-
 .about-main .about-story {
     padding-top: 142px;
 }
-
-/* ==============================
-   2. MAISONTUB STORY
-================================= */
 
 .about-story {
     background: var(--color-white);
@@ -50,10 +41,6 @@
 .about-story__stats {
     margin-top: 34px;
 }
-
-/* ==============================
-   3. INDEPENDENT PLATFORM MODEL
-================================= */
 
 .platform-model {
     position: relative;
@@ -179,10 +166,6 @@
     line-height: 1.6;
 }
 
-/* ==============================
-   4. WHO MAISONTUB HELPS
-================================= */
-
 .who-helps {
     background: var(--color-white);
 }
@@ -247,10 +230,6 @@
 .help-card p {
     margin-top: 16px;
 }
-
-/* ==============================
-   5. WHAT WE HELP WITH / DON'T DO
-================================= */
 
 .help-boundaries {
     background: var(--color-off-white);
@@ -345,10 +324,6 @@
 .boundary-panel--dark .boundary-list__item span {
     color: var(--color-dark-muted);
 }
-
-/* ==============================
-   6. REQUEST JOURNEY
-================================= */
 
 .request-journey {
     background: var(--color-white);
@@ -537,10 +512,6 @@
     background: var(--color-gold);
 }
 
-/* ==============================
-   7. PROVIDER OPTION CLARITY
-================================= */
-
 .provider-clarity {
     background: var(--color-off-white);
 }
@@ -649,10 +620,6 @@
     color: var(--color-teal-hover);
 }
 
-/* ==============================
-   8. MAISONTUB TRUST PRINCIPLES
-================================= */
-
 .trust-principles {
     background: var(--color-dark);
     color: var(--color-white);
@@ -711,10 +678,6 @@
     color: var(--color-dark-muted);
 }
 
-/* ==============================
-   9. ABOUT FAQ TWIST
-================================= */
-
 .about-faq .faq-thought {
     border-left-color: var(--color-gold);
 }
@@ -737,10 +700,6 @@
     transform: translateX(-50%);
     background: var(--color-gold);
 }
-
-/* ==============================
-   RESPONSIVE
-================================= */
 
 @media (max-width: 1180px) {
     .who-helps__grid {

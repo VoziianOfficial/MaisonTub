@@ -2,20 +2,6 @@
 
 declare(strict_types=1);
 
-/*
-|--------------------------------------------------------------------------
-| MaisonTub Contact Form Backend
-|--------------------------------------------------------------------------
-| This form handler receives request details from contact.html and sends
-| them to the editable recipient email below.
-|
-| Hosting note:
-| The form only works on a server that supports PHP.
-| For local testing, run:
-| php -S localhost:8000
-|--------------------------------------------------------------------------
-*/
-
 header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -27,21 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-/*
-|--------------------------------------------------------------------------
-| Editable Settings
-|--------------------------------------------------------------------------
-*/
-
 $recipientEmail = 'hello@maisontub.com';
 $siteName = 'MaisonTub';
 $fromEmail = 'no-reply@maisontub.com';
-
-/*
-|--------------------------------------------------------------------------
-| Helpers
-|--------------------------------------------------------------------------
-*/
 
 function json_response(bool $success, string $message, int $statusCode = 200): void
 {
@@ -78,23 +52,11 @@ function has_header_injection(string $value): bool
     return (bool) preg_match('/[\r\n]/', $value);
 }
 
-/*
-|--------------------------------------------------------------------------
-| Honeypot Anti-Spam
-|--------------------------------------------------------------------------
-*/
-
 $honeypot = clean_text($_POST['website'] ?? '');
 
 if ($honeypot !== '') {
     json_response(true, 'Thank you. Your request has been received.');
 }
-
-/*
-|--------------------------------------------------------------------------
-| Input Collection
-|--------------------------------------------------------------------------
-*/
 
 $fullName = clean_text($_POST['fullName'] ?? '');
 $email = clean_text($_POST['email'] ?? '');
@@ -106,12 +68,6 @@ $privacyConsent = clean_text($_POST['privacyConsent'] ?? '');
 
 $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'Unknown IP';
 $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown user agent';
-
-/*
-|--------------------------------------------------------------------------
-| Validation
-|--------------------------------------------------------------------------
-*/
 
 if (
     $fullName === '' ||
@@ -144,12 +100,6 @@ if (mb_strlen($fullName) > 120 || mb_strlen($email) > 160 || mb_strlen($phone) >
 if (mb_strlen($message) > 4000) {
     json_response(false, 'Please shorten your message and try again.', 422);
 }
-
-/*
-|--------------------------------------------------------------------------
-| Email Content
-|--------------------------------------------------------------------------
-*/
 
 $subject = 'New MaisonTub Walk-In Tub Request';
 
@@ -192,12 +142,6 @@ $headers = [
     'Reply-To: ' . $fullName . ' <' . $email . '>',
     'X-Mailer: PHP/' . phpversion()
 ];
-
-/*
-|--------------------------------------------------------------------------
-| Send Mail
-|--------------------------------------------------------------------------
-*/
 
 $mailSent = @mail(
     $recipientEmail,

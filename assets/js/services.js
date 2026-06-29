@@ -332,7 +332,6 @@
         const content = getContent(serviceId);
 
         main.innerHTML = `
-            <!-- 1. Shared Service Hero -->
             <section class="shared-hero" aria-labelledby="service-hero-title">
                 <div class="shared-hero__media">
                     <img
@@ -388,7 +387,6 @@
                 </div>
             </section>
 
-            <!-- 2. Service Overview -->
             <section class="service-overview section" id="service-overview" aria-labelledby="service-overview-title">
                 <div class="container-wide service-overview__grid">
                     <div class="service-overview__photo image-frame" data-aos="fade-right">
@@ -430,7 +428,6 @@
                 </div>
             </section>
 
-            <!-- 3. Common Project Situations -->
             <section class="service-situations section" id="project-situations" aria-labelledby="project-situations-title">
                 <div class="service-situations__media">
                     <img
@@ -461,7 +458,6 @@
                 </div>
             </section>
 
-            <!-- 4. What Provider Options May Include -->
             <section class="provider-options section" id="provider-options" aria-labelledby="provider-options-title">
                 <div class="container-wide">
                     <div class="provider-options__head" data-aos="fade-up">
@@ -488,7 +484,6 @@
                 </div>
             </section>
 
-            <!-- 5. How MaisonTub Helps With This Service -->
             <section class="service-help section" id="service-help" data-service-tabs-section aria-labelledby="service-help-title">
                 <div class="container-wide">
                     <div class="service-help__head" data-aos="fade-up">
@@ -502,7 +497,6 @@
                 </div>
             </section>
 
-            <!-- 6. Comparison Factors -->
             <section class="service-comparison section" id="comparison-factors" aria-labelledby="comparison-factors-title">
                 <div class="container-wide">
                     <div class="service-comparison__layout">
@@ -545,7 +539,6 @@
                 </div>
             </section>
 
-            <!-- 7. Service FAQ -->
             <section class="faq-section service-page-faq section" id="service-faq" aria-labelledby="service-faq-title">
                 <div class="container">
                     <div class="faq-section__head" data-aos="fade-up">
@@ -578,7 +571,6 @@
                 </div>
             </section>
 
-            <!-- 8. Pre-Footer CTA Card -->
             <section class="prefooter-cta" aria-labelledby="service-prefooter-title">
                 <div class="prefooter-cta__media">
                     <img

@@ -1,16 +1,6 @@
-/* ==============================
-   HOME PAGE
-   Page-specific styles only
-================================= */
-
-/* Extra spacing because shared hero cards overlap the next section */
 .home-main .home-need-nav {
     padding-top: 142px;
 }
-
-/* ==============================
-   2. QUICK WALK-IN TUB NEED NAVIGATION
-================================= */
 
 .home-need-nav {
     background: var(--color-white);
@@ -257,10 +247,6 @@
     background: rgba(214, 184, 120, 0.72);
 }
 
-/* ==============================
-   3. MAISON TUB PLATFORM OVERVIEW
-================================= */
-
 .home-platform {
     position: relative;
     min-height: 650px;
@@ -359,10 +345,6 @@
     flex: 0 0 auto;
     color: var(--color-gold);
 }
-
-/* ==============================
-   4. POPULAR WALK-IN TUB SERVICE PATHS
-================================= */
 
 .home-service-paths {
     background: var(--color-dark);
@@ -486,10 +468,6 @@
 .service-path-card__link:hover svg {
     transform: translateX(4px);
 }
-
-/* ==============================
-   5. COMFORT SITUATION SELECTOR
-================================= */
 
 .comfort-selector {
     position: relative;
@@ -638,10 +616,6 @@
     color: rgba(255, 255, 255, 0.72);
 }
 
-/* ==============================
-   6. HOW MAISON TUB MATCHING WORKS
-================================= */
-
 .matching-works {
     background: var(--color-white);
 }
@@ -703,10 +677,6 @@
     width: 92px;
     background: var(--color-teal);
 }
-
-/* ==============================
-   7. WHAT YOU CAN COMPARE
-================================= */
 
 .compare-section {
     background: var(--color-off-white);
@@ -787,10 +757,6 @@
     transform: scaleX(1);
 }
 
-/* ==============================
-   8. BATHROOM PLANNING HIGHLIGHTS
-================================= */
-
 .planning-highlights {
     background: var(--color-white);
 }
@@ -849,10 +815,6 @@
     border-radius: calc(var(--radius-lg) - 10px);
     pointer-events: none;
 }
-
-/* ==============================
-   9. DARK TRUST & TRANSPARENCY BLOCK
-================================= */
 
 .transparency-block {
     background: var(--color-dark);
@@ -998,10 +960,6 @@
     background: var(--color-gold);
 }
 
-/* ==============================
-   10. HOME FAQ TWIST
-================================= */
-
 .home-faq .faq-thought {
     border-left-color: var(--color-teal);
 }
@@ -1023,10 +981,6 @@
     height: 2px;
     background: var(--color-teal);
 }
-
-/* ==============================
-   RESPONSIVE
-================================= */
 
 @media (max-width: 1180px) {
 
@@ -1414,10 +1368,6 @@
     }
 }
 
-/* ==============================
-   FIX: HOME PLATFORM CARDS WIDER + SAME SIZE
-================================= */
-
 .home-platform__grid {
     width: min(100%, 1180px) !important;
     margin-inline: auto !important;
@@ -1450,7 +1400,6 @@
     max-width: 520px !important;
 }
 
-/* tablet */
 @media (max-width: 980px) {
     .home-platform__grid {
         width: min(100%, 760px) !important;
@@ -1465,7 +1414,6 @@
     }
 }
 
-/* mobile */
 @media (max-width: 768px) {
     .home-platform__grid {
         width: 100% !important;
@@ -1482,7 +1430,6 @@
     }
 }
 
-/* small mobile */
 @media (max-width: 480px) {
 
     .home-platform__photo,
@@ -1495,10 +1442,6 @@
         padding: 22px !important;
     }
 }
-
-/* ==============================
-   HOVER: HOME PLATFORM PHOTO + CARD
-================================= */
 
 .home-platform__photo,
 .home-platform__card {
@@ -1515,7 +1458,6 @@
         filter var(--transition-base);
 }
 
-/* hover на фото */
 .home-platform__photo:hover {
     transform: translateY(-6px);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
@@ -1526,7 +1468,6 @@
     filter: contrast(1.04) saturate(1.03);
 }
 
-/* hover на текстовую карточку */
 .home-platform__card:hover {
     transform: translateY(-6px);
     border-color: rgba(214, 184, 120, 0.56);
@@ -1534,7 +1475,6 @@
     box-shadow: 0 30px 86px rgba(0, 0, 0, 0.38);
 }
 
-/* hover линия внутри карточки */
 .home-platform__card::after {
     content: "";
     display: block;
@@ -1553,7 +1493,6 @@
     background: var(--color-teal-hover);
 }
 
-/* hover на check items */
 .home-platform__check {
     transition:
         color var(--transition-base),
@@ -1576,7 +1515,6 @@
     transform: scale(1.12);
 }
 
-/* mobile: hover мягче, чтобы не прыгало */
 @media (max-width: 768px) {
 
     .home-platform__photo:hover,
@@ -1592,10 +1530,6 @@
         transform: none;
     }
 }
-
-/* ==============================
-   FINAL FIX: COMFORT SELECTOR STABLE
-================================= */
 
 .comfort-selector {
     min-height: 620px !important;
@@ -1742,10 +1676,6 @@
     }
 }
 
-/* ==============================
-   COMFORT SELECTOR TITLE SIZE FIX
-================================= */
-
 .comfort-selector__content {
     max-width: 820px !important;
 }
@@ -1761,7 +1691,6 @@
     max-width: 760px !important;
 }
 
-/* tablet */
 @media (max-width: 980px) {
     .comfort-selector__content {
         max-width: 100% !important;
@@ -1786,7 +1715,6 @@
     }
 }
 
-/* mobile */
 @media (max-width: 768px) {
     .comfort-selector h2 {
         font-size: clamp(1.5rem, 8vw, 2.35rem) !important;
@@ -1795,11 +1723,6 @@
     }
 }
 
-/* ==============================
-   REDESIGN: TRANSPARENCY BLOCK
-   white section + wide premium glass card
-================================= */
-
 .transparency-block {
     position: relative;
     overflow: hidden !important;
@@ -1807,7 +1730,6 @@
     color: var(--color-dark) !important;
 }
 
-/* легкая матовая глубина без темного фона */
 .transparency-block::before {
     content: "";
     position: absolute;
@@ -1822,7 +1744,6 @@
     z-index: 2;
 }
 
-/* широкий блок почти на всю секцию */
 .transparency-slider {
     position: relative !important;
     width: min(100%, 1280px) !important;
@@ -1831,7 +1752,6 @@
     padding: 0 !important;
 }
 
-/* сама большая glass-карточка */
 .transparency-slider__viewport {
     position: relative !important;
     overflow: hidden !important;
@@ -1847,7 +1767,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.86);
 }
 
-/* аккуратная акцентная линия снизу */
 .transparency-slider__viewport::after {
     content: "";
     position: absolute;
@@ -1867,7 +1786,6 @@
     transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
-/* один слайд = одна лаконичная карточка */
 .transparency-slide {
     position: relative !important;
     min-width: 100% !important;
@@ -1880,7 +1798,6 @@
     box-shadow: none !important;
 }
 
-/* большая иконка справа сверху */
 .transparency-slide__icon {
     position: absolute !important;
     top: 34px !important;
@@ -1903,7 +1820,6 @@
     stroke-width: 1.65 !important;
 }
 
-/* убираем старую сетку и делаем контент ровным */
 .transparency-slide__grid {
     display: block !important;
     max-width: 900px !important;
@@ -1925,7 +1841,6 @@
     line-height: 1.72 !important;
 }
 
-/* details — не карточки, а аккуратная нижняя строка */
 .transparency-slide__details {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -1975,7 +1890,6 @@
     line-height: 1.55 !important;
 }
 
-/* controls по центру красиво */
 .transparency-slider__controls {
     display: flex !important;
     align-items: center !important;
@@ -2018,7 +1932,6 @@
     height: 21px !important;
 }
 
-/* dots */
 .transparency-slider__dots {
     display: flex !important;
     align-items: center !important;
@@ -2050,7 +1963,6 @@
     background: var(--color-gold) !important;
 }
 
-/* hover всей широкой карточки */
 .transparency-slider__viewport {
     transition:
         border-color var(--transition-base),
@@ -2068,7 +1980,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.92);
 }
 
-/* tablet */
 @media (max-width: 980px) {
     .transparency-slider {
         width: 100% !important;
@@ -2119,7 +2030,6 @@
     }
 }
 
-/* mobile */
 @media (max-width: 768px) {
     .transparency-slider__viewport {
         border-radius: 22px !important;
@@ -2174,10 +2084,6 @@
     }
 }
 
-/* ==============================
-   TRANSPARENCY TITLE WIDTH FIX
-================================= */
-
 .transparency-slide {
     padding-right: 150px !important;
 }
@@ -2197,7 +2103,6 @@
     max-width: 960px !important;
 }
 
-/* чтобы большая иконка не давила заголовок */
 .transparency-slide__icon {
     width: 82px !important;
     height: 82px !important;
@@ -2208,7 +2113,6 @@
     height: 48px !important;
 }
 
-/* tablet */
 @media (max-width: 980px) {
     .transparency-slide {
         padding-right: 110px !important;
@@ -2228,7 +2132,6 @@
     }
 }
 
-/* mobile */
 @media (max-width: 768px) {
     .transparency-slide {
         padding: 88px 20px 28px !important;

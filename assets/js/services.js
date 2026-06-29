@@ -90,7 +90,7 @@
                     ['Scheduling terms', 'Provider schedules, availability, installation timing, and next steps vary by location and project.', 'calendar-clock']
                 ]
             ],
-            comparisonPhoto: 'assets/images/service-2.jpg',
+            comparisonPhoto: 'assets/images/card-7.jpg',
             faq: [
                 ['Can MaisonTub replace my current tub?', 'No. MaisonTub does not replace, install, repair, inspect, sell, or manufacture walk-in tubs. It helps homeowners compare available provider options.'],
                 ['What should I share for a replacement request?', 'Useful details include current tub type, bathroom layout, desired changes, access needs, feature preferences, and timing.'],

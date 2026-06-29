@@ -112,8 +112,8 @@ window.MaisonTubConfig = {
             shortTitle: 'Replacement',
             url: 'walk-in-tub-replacement.html',
             icon: 'refresh-cw',
-            image: 'assets/images/service-2.jpg',
-            heroImage: 'assets/images/hero-replacement.jpg',
+            image: 'assets/images/card-2.jpg',
+            heroImage: 'assets/images/service-2.jpg',
             description:
                 'Review provider options for replacing an existing tub or older walk-in tub with a more suitable comfort, access, or layout solution.',
             badge: 'Upgrade focused',

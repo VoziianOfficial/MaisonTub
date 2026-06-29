@@ -19,28 +19,28 @@
         {
             number: 'Step 01',
             icon: 'file-pen-line',
-            title: 'Submit project details',
+            title: 'Submit details',
             text:
                 'Homeowners share the walk-in tub request type, bathroom layout notes, access preferences, timing, and contact details.'
         },
         {
             number: 'Step 02',
             icon: 'route',
-            title: 'Request is organized',
+            title: 'organized',
             text:
                 'MaisonTub helps structure the information so the request can be considered for participating provider matching where available.'
         },
         {
             number: 'Step 03',
             icon: 'git-compare',
-            title: 'Review provider',
+            title: 'Provider',
             text:
                 'Participating providers may respond with availability, quote details, scheduling information, product discussions, and service terms.'
         },
         {
             number: 'Step 04',
             icon: 'mouse-pointer-click',
-            title: 'Choose whether',
+            title: 'You Choose',
             text:
                 'Submitting a request does not create a service agreement. Homeowners decide whether a provider option fits their needs.'
         }

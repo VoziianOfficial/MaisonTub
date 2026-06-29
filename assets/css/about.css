@@ -466,6 +466,9 @@
     margin-top: 60px;
     font-size: clamp(1rem, 1.55vw, 1.34rem);
     line-height: 1.12;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .journey-step__icon {

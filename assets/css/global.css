@@ -2219,3 +2219,278 @@ body {
         max-width: 100% !important;
     }
 }
+
+/* ==============================
+   FIX: RESPONSIVE SHARED HERO CARDS
+   Tablet + mobile clean layout
+================================= */
+
+/* TABLET */
+@media (max-width: 980px) {
+    .shared-hero {
+        display: block !important;
+        min-height: auto !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+    }
+
+    .shared-hero__media {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 0 !important;
+    }
+
+    .shared-hero__content {
+        position: relative !important;
+        z-index: 2 !important;
+        width: min(100% - 32px, var(--container-wide)) !important;
+        padding: 72px 0 28px !important;
+    }
+
+    .shared-hero__text {
+        max-width: 760px !important;
+    }
+
+    .shared-hero h1 {
+        max-width: 760px !important;
+    }
+
+    .shared-hero__lead {
+        max-width: 640px !important;
+    }
+
+    .hero-float {
+        position: relative !important;
+        right: auto !important;
+        bottom: auto !important;
+        z-index: 3 !important;
+        width: min(100% - 32px, var(--container-wide)) !important;
+        margin: 0 auto !important;
+        padding: 0 0 42px !important;
+        transform: none !important;
+    }
+
+    .hero-float__grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .hero-float-card {
+        min-width: 0 !important;
+        min-height: 132px !important;
+        padding: 18px !important;
+        border-radius: 16px !important;
+    }
+
+    .hero-float-card__icon {
+        top: 16px !important;
+        right: 16px !important;
+    }
+
+    .hero-float-card__icon svg,
+    .hero-float-card__icon i {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .hero-float-card h3 {
+        max-width: 78% !important;
+        font-size: 0.86rem !important;
+    }
+
+    .hero-float-card p {
+        max-width: 100% !important;
+        margin-top: 12px !important;
+        font-size: 0.86rem !important;
+        line-height: 1.45 !important;
+    }
+
+    /* убираем старые огромные отступы у секций после hero */
+    .home-main .shared-hero+.section,
+    .about-main .shared-hero+.section,
+    .all-services-main .shared-hero+.section,
+    .contact-main .shared-hero+.section,
+    .service-main .shared-hero+.section {
+        padding-top: var(--section-padding) !important;
+    }
+
+    .all-services-main .service-nav-strip,
+    .contact-main .contact-info-strip,
+    .service-main .service-overview {
+        padding-top: var(--section-padding) !important;
+    }
+}
+
+/* SMALL TABLET / MOBILE */
+@media (max-width: 768px) {
+    .shared-hero {
+        text-align: left !important;
+    }
+
+    .shared-hero__content {
+        width: min(100% - 24px, var(--container-wide)) !important;
+        padding: 54px 0 24px !important;
+    }
+
+    .shared-hero__text,
+    .shared-hero h1,
+    .shared-hero__lead {
+        max-width: 100% !important;
+    }
+
+    .shared-hero__actions {
+        width: 100% !important;
+        margin-top: 26px !important;
+    }
+
+    .hero-float {
+        width: min(100% - 24px, var(--container-wide)) !important;
+        margin: 0 auto !important;
+        padding-bottom: 34px !important;
+    }
+
+    .hero-float__grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .hero-float-card {
+        display: grid !important;
+        align-content: center !important;
+        min-height: 96px !important;
+        padding: 16px 54px 16px 16px !important;
+        border-radius: 15px !important;
+    }
+
+    .hero-float-card h3 {
+        max-width: 100% !important;
+        font-size: 0.84rem !important;
+    }
+
+    .hero-float-card p {
+        margin-top: 7px !important;
+        font-size: 0.84rem !important;
+        line-height: 1.42 !important;
+    }
+
+    .hero-float-card__icon {
+        top: 50% !important;
+        right: 16px !important;
+        transform: translateY(-50%) !important;
+    }
+
+    .hero-float-card__icon svg,
+    .hero-float-card__icon i {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .shared-hero__content {
+        width: min(100% - 20px, var(--container-wide)) !important;
+        padding: 44px 0 22px !important;
+    }
+
+    .hero-float {
+        width: min(100% - 20px, var(--container-wide)) !important;
+        padding-bottom: 28px !important;
+    }
+
+    .hero-float-card {
+        min-height: 88px !important;
+        padding: 14px 48px 14px 14px !important;
+    }
+
+    .hero-float-card h3 {
+        font-size: 0.78rem !important;
+    }
+
+    .hero-float-card p {
+        font-size: 0.8rem !important;
+    }
+
+    .hero-float-card__icon svg,
+    .hero-float-card__icon i {
+        width: 23px !important;
+        height: 23px !important;
+    }
+}
+
+/* ==============================
+   FIX: CENTER ALL H1 ON TABLET / MOBILE
+================================= */
+
+@media (max-width: 980px) {
+
+    h1,
+    .shared-hero h1,
+    .legal-hero h1 {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .shared-hero__text,
+    .legal-hero__content {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .shared-hero__eyebrow,
+    .legal-hero .section-kicker {
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .shared-hero__lead,
+    .legal-hero p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .shared-hero__actions,
+    .shared-hero .btn-row {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1,
+    .shared-hero h1,
+    .legal-hero h1 {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .shared-hero__text,
+    .legal-hero__content {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    .shared-hero__eyebrow {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .shared-hero__eyebrow::before {
+        width: 32px !important;
+    }
+
+    .shared-hero__lead {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    .shared-hero__actions {
+        justify-content: center !important;
+    }
+}

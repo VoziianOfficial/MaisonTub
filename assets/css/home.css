@@ -1265,12 +1265,25 @@
     }
 
     .compare-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "title icon"
+            "text text";
         gap: 12px;
     }
 
+    .compare-row__icon {
+        grid-area: icon;
+        justify-self: end;
+        align-self: start;
+    }
+
+    .compare-row h3 {
+        grid-area: title;
+    }
+
     .compare-row p {
-        grid-column: auto;
+        grid-area: text;
     }
 
     .planning-highlights__photo {

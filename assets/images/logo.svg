@@ -1,0 +1,18 @@
+<svg width="520" height="140" viewBox="0 0 520 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="140" fill="transparent"/>
+
+  <!-- Decorative premium line -->
+  <line x1="22" y1="108" x2="498" y2="108" stroke="#D6B878" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Small accent line above -->
+  <line x1="24" y1="32" x2="108" y2="32" stroke="#4E9DA3" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="20" y="88"
+        font-family="Montserrat, Arial, Helvetica, sans-serif"
+        font-size="72"
+        font-weight="800"
+        letter-spacing="1.2">
+    <tspan fill="#FFFFFF">Maison</tspan><tspan fill="#25888C">Tub</tspan>
+  </text>
+</svg>

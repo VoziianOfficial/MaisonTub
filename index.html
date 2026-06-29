@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaisonTub | Independent Walk-In Tub Provider Matching</title>
+    <meta name="description"
+        content="MaisonTub helps homeowners submit walk-in tub project details and compare available local provider options for installation, replacement, conversion, compact options, hydrotherapy, and accessible bath safety features.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+        <div class="container-wide header__inner">
+            <a class="header__brand" href="index.html" aria-label="MaisonTub home">
+                <img class="header__logo" src="assets/images/logo.svg" alt="MaisonTub logo" width="520" height="140">
+            </a>
+
+            <nav class="header__nav" aria-label="Main navigation">
+                <a class="header__nav-link" href="index.html">Home</a>
+                <a class="header__nav-link" href="about.html">About</a>
+
+                <div class="header__dropdown" data-services-dropdown>
+                    <a class="header__dropdown-trigger" href="all-services.html" data-services-trigger
+                        aria-expanded="false" aria-haspopup="true">
+                        <span>Services</span>
+                        <i data-lucide="chevron-down" aria-hidden="true"></i>
+                    </a>
+
+                    <div class="header__dropdown-menu" data-services-dropdown-list aria-label="Service pages"></div>
+                </div>
+
+                <a class="header__nav-link" href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header__actions">
+                <a class="header-action" href="tel:+18885550186" data-phone-link data-keep-content
+                    aria-label="Call MaisonTub">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                </a>
+
+                <a class="header-action header-action--email" href="mailto:hello@maisontub.com" data-email-link
+                    data-keep-content aria-label="Email MaisonTub">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+
+                <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open menu"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="menu-toggle__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div data-mobile-menu></div>
+
+    <main id="main" class="home-main">
+        <!-- 1. Shared Hero / MaisonTub Intro -->
+        <section class="shared-hero" aria-labelledby="home-hero-title">
+            <div class="shared-hero__media">
+                <img src="assets/images/hero-home.jpg" alt="Premium bathroom with walk-in tub planning atmosphere"
+                    width="1920" height="1180">
+            </div>
+
+            <div class="shared-hero__content">
+                <div class="shared-hero__text" data-aos="fade-up">
+                    <p class="shared-hero__eyebrow">Independent Walk-In Tub Matching</p>
+
+                    <h1 id="home-hero-title">
+                        Compare Walk-In Tub Provider Options
+                    </h1>
+
+                    <p class="shared-hero__lead">
+                        MaisonTub helps homeowners submit project details and review available local provider options
+                        for walk-in tub needs.
+                    </p>
+
+                    <div class="btn-row shared-hero__actions">
+                        <a class="btn btn--gold" href="contact.html">
+                            <span>Start Your Request</span>
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="btn btn--outline-light" href="all-services.html">
+                            <span>Explore Services</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-float" aria-label="MaisonTub request benefits">
+                <div class="hero-float__grid">
+                    <article class="hero-float-card" data-aos="fade-up">
+                        <div class="hero-float-card__icon">
+                            <i data-lucide="list-checks" aria-hidden="true"></i>
+                        </div>
+                        <h3>Submit Details</h3>
+                        <p>Share your walk-in tub project needs through a simple request path.</p>
+                    </article>
+
+                    <article class="hero-float-card" data-aos="fade-up" data-aos-delay="80">
+                        <div class="hero-float-card__icon">
+                            <i data-lucide="git-compare" aria-hidden="true"></i>
+                        </div>
+                        <h3>Compare Options</h3>
+                        <p>Review available provider responses where participating providers are available.</p>
+                    </article>
+
+                    <article class="hero-float-card" data-aos="fade-up" data-aos-delay="160">
+                        <div class="hero-float-card__icon">
+                            <i data-lucide="hand-pointer" aria-hidden="true"></i>
+                        </div>
+                        <h3>You Choose</h3>
+                        <p>Decide whether to continue with a provider after reviewing terms.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Quick Walk-In Tub Need Navigation -->
+        <section class="home-need-nav section" id="quick-needs" data-home-need-nav aria-labelledby="quick-needs-title">
+            <div class="container-wide">
+                <div class="home-need-nav__head" data-aos="fade-up">
+                    <p class="section-kicker">Quick request navigation</p>
+                    <h2 id="quick-needs-title">
+                        Find the Walk-In Tub Path That Fits Your Need
+                    </h2>
+                    <p>
+                        Choose a common project goal and see how MaisonTub organizes request details before available
+                        provider options are reviewed.
+                    </p>
+                </div>
+
+                <div class="home-need-nav__layout">
+                    <div class="need-list" data-need-list data-aos="fade-right" aria-label="Walk-in tub need options">
+                    </div>
+
+                    <article class="need-panel" data-need-panel data-aos="fade-left" aria-live="polite"></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MaisonTub Platform Overview -->
+        <section class="home-platform section" id="platform-overview" aria-labelledby="platform-overview-title">
+            <div class="home-platform__media">
+                <img src="assets/images/hero-about.jpg"
+                    alt="Calm bathroom interior used for walk-in tub provider matching overview" loading="lazy"
+                    width="1920" height="1120">
+            </div>
+
+            <div class="container-wide home-platform__inner">
+                <div class="home-platform__head" data-aos="fade-up">
+                    <p class="section-kicker">Platform overview</p>
+                    <h2 id="platform-overview-title">
+                        A Clearer Way to Start a Walk-In Tub Request
+                    </h2>
+                </div>
+
+                <div class="home-platform__grid">
+                    <div class="home-platform__photo image-frame" data-aos="fade-right">
+                        <img src="assets/images/service-1.jpg" alt="Walk-in tub planning details in a premium bathroom"
+                            loading="lazy" width="720" height="720">
+                    </div>
+
+                    <article class="home-platform__card" data-aos="fade-left">
+                        <h3>Independent matching, not direct installation.</h3>
+                        <p>
+                            MaisonTub helps homeowners organize project details and compare available provider options.
+                            The platform does not install, sell, repair, inspect, manufacture, or provide medical
+                            advice.
+                        </p>
+
+                        <div class="home-platform__checks">
+                            <span class="home-platform__check">
+                                <i data-lucide="check-circle-2" aria-hidden="true"></i>
+                                <span>Submit your walk-in tub request details.</span>
+                            </span>
+                            <span class="home-platform__check">
+                                <i data-lucide="check-circle-2" aria-hidden="true"></i>
+                                <span>Review available local provider responses where coverage exists.</span>
+                            </span>
+                            <span class="home-platform__check">
+                                <i data-lucide="check-circle-2" aria-hidden="true"></i>
+                                <span>Choose whether to continue after reviewing provider terms.</span>
+                            </span>
+                        </div>
+
+                        <a class="btn btn--gold" href="about.html">
+                            <span>Learn About MaisonTub</span>
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Popular Walk-In Tub Service Paths -->
+        <section class="home-service-paths section" id="popular-services" aria-labelledby="popular-services-title">
+            <div class="container-wide">
+                <div class="home-service-paths__head" data-aos="fade-up">
+                    <p class="section-kicker">Popular service paths</p>
+                    <h2 id="popular-services-title">
+                        Start With a Common Walk-In Tub Category
+                    </h2>
+                </div>
+
+                <div class="home-service-paths__grid" data-home-service-paths></div>
+            </div>
+        </section>
+
+        <!-- 5. Comfort Situation Selector -->
+        <section class="comfort-selector section" id="comfort-selector" data-comfort-selector
+            aria-labelledby="comfort-selector-title">
+            <div class="comfort-selector__media">
+                <img src="assets/images/hero-home.jpg" alt="Walk-in tub comfort planning background" data-comfort-image
+                    loading="lazy" width="1920" height="1120">
+            </div>
+
+            <div class="container-wide comfort-selector__grid">
+                <div class="comfort-selector__list" data-comfort-list data-aos="fade-right"
+                    aria-label="Comfort situation options"></div>
+
+                <div class="comfort-selector__content" data-aos="fade-left">
+                    <p class="comfort-selector__label" data-comfort-label>Easy step-in access</p>
+                    <h2 id="comfort-selector-title" data-comfort-title>
+                        Plan around easier entry and daily bathing confidence.
+                    </h2>
+                    <p class="comfort-selector__text" data-comfort-text>
+                        MaisonTub helps homeowners describe access preferences clearly so participating providers can
+                        respond with available walk-in tub options where coverage exists.
+                    </p>
+
+                    <div class="comfort-selector__note" data-comfort-note></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. How MaisonTub Matching Works -->
+        <section class="matching-works section" id="matching-works" aria-labelledby="matching-works-title">
+            <div class="container-wide">
+                <div class="matching-works__head" data-aos="fade-up">
+                    <div>
+                        <p class="section-kicker">Matching clarity</p>
+                        <h2 id="matching-works-title">
+                            Compare the Details That Shape Provider Responses
+                        </h2>
+                    </div>
+
+                    <p>
+                        A clearer request helps participating providers understand the project type, layout, features,
+                        timing, and terms that may matter.
+                    </p>
+                </div>
+
+                <div class="matching-works__grid" data-home-match-cards></div>
+            </div>
+        </section>
+
+        <!-- 7. What You Can Compare -->
+        <section class="compare-section section" id="compare" aria-labelledby="compare-title">
+            <div class="container-wide compare-section__layout">
+                <div class="compare-section__intro" data-aos="fade-right">
+                    <p class="section-kicker">Comparison points</p>
+                    <h2 id="compare-title">
+                        What You Can Compare Before Choosing
+                    </h2>
+                    <p>
+                        MaisonTub keeps the request path focused on information that homeowners can review before
+                        deciding whether to continue with a participating provider.
+                    </p>
+                </div>
+
+                <div class="compare-rows" data-home-compare-rows></div>
+            </div>
+        </section>
+
+        <!-- 8. Bathroom Planning Highlights -->
+        <section class="planning-highlights section" id="planning-highlights"
+            aria-labelledby="planning-highlights-title">
+            <div class="container-wide planning-highlights__grid">
+                <div class="planning-highlights__content" data-aos="fade-right">
+                    <p class="section-kicker">Planning highlights</p>
+                    <h2 id="planning-highlights-title">
+                        Think Through Space, Access, Comfort and Features
+                    </h2>
+                    <p>
+                        Walk-in tub requests often involve practical choices. MaisonTub helps homeowners organize those
+                        choices before comparing local provider options where available.
+                    </p>
+
+                    <div class="planning-highlights__list">
+                        <span class="planning-highlights__item">
+                            <i data-lucide="ruler" aria-hidden="true"></i>
+                            <span>Bathroom space, entry path, and existing tub layout.</span>
+                        </span>
+                        <span class="planning-highlights__item">
+                            <i data-lucide="door-open" aria-hidden="true"></i>
+                            <span>Door direction, threshold preferences, and seating needs.</span>
+                        </span>
+                        <span class="planning-highlights__item">
+                            <i data-lucide="waves" aria-hidden="true"></i>
+                            <span>Comfort features, soaking goals, and hydrotherapy-style options.</span>
+                        </span>
+                        <span class="planning-highlights__item">
+                            <i data-lucide="file-check-2" aria-hidden="true"></i>
+                            <span>Provider quote details, timelines, warranties, and service terms.</span>
+                        </span>
+                    </div>
+
+                    <div class="btn-row">
+                        <a class="btn btn--teal" href="contact.html">
+                            <span>Submit Project Details</span>
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="btn btn--outline" href="all-services.html">
+                            <span>View Service Categories</span>
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="planning-highlights__photo image-frame" data-aos="fade-left">
+                    <img src="assets/images/hero-services.jpg" alt="Bathroom planning photo for walk-in tub comparison"
+                        loading="lazy" width="820" height="820">
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Dark Trust & Transparency Block -->
+        <section class="transparency-block section" id="transparency" aria-label="MaisonTub transparency information">
+            <div class="container-wide">
+                <div class="transparency-slider" data-transparency-slider tabindex="0" data-aos="fade-up">
+                    <div class="transparency-slider__viewport">
+                        <div class="transparency-slider__track" data-transparency-track></div>
+                    </div>
+
+                    <div class="transparency-slider__controls" aria-label="Transparency slider controls">
+                        <button class="transparency-slider__button" type="button" data-transparency-prev
+                            aria-label="Previous transparency note">
+                            <i data-lucide="arrow-left" aria-hidden="true"></i>
+                        </button>
+
+                        <div class="transparency-slider__dots" data-transparency-dots></div>
+
+                        <button class="transparency-slider__button" type="button" data-transparency-next
+                            aria-label="Next transparency note">
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Homepage FAQ -->
+        <section class="faq-section home-faq section" id="faq" aria-labelledby="home-faq-title">
+            <div class="container">
+                <div class="faq-section__head" data-aos="fade-up">
+                    <p class="section-kicker">Common questions</p>
+                    <h2 id="home-faq-title">
+                        Walk-In Tub Matching Questions
+                    </h2>
+                </div>
+
+                <div class="faq-thought" data-aos="fade-up">
+                    <p>
+                        MaisonTub is designed to make the request process clearer while keeping final provider terms,
+                        pricing, scheduling, licensing, insurance, and warranties with participating providers.
+                    </p>
+                </div>
+
+                <div class="faq-accordion" data-accordion data-open-first>
+                    <article class="faq-item" data-accordion-item data-aos="fade-up">
+                        <button class="faq-question" type="button" data-accordion-button>
+                            <span>Does MaisonTub install walk-in tubs?</span>
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" data-accordion-panel>
+                            <div class="faq-answer__inner">
+                                <p>No. MaisonTub is an independent provider-matching platform. Participating providers,
+                                    not MaisonTub, discuss final pricing, scheduling, warranties, licensing, insurance,
+                                    product models, and service terms.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-accordion-item data-aos="fade-up">
+                        <button class="faq-question" type="button" data-accordion-button>
+                            <span>What happens after I submit a request?</span>
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" data-accordion-panel>
+                            <div class="faq-answer__inner">
+                                <p>Your project details may be routed to participating providers where available. You
+                                    can review provider responses and choose whether to continue.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-accordion-item data-aos="fade-up">
+                        <button class="faq-question" type="button" data-accordion-button>
+                            <span>Can I compare different walk-in tub needs?</span>
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" data-accordion-panel>
+                            <div class="faq-answer__inner">
+                                <p>Yes. MaisonTub organizes request paths for installation, replacement, tub conversion,
+                                    compact options, hydrotherapy options, and accessible safety features.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item" data-accordion-item data-aos="fade-up">
+                        <button class="faq-question" type="button" data-accordion-button>
+                            <span>Is availability the same everywhere?</span>
+                            <i data-lucide="plus" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" data-accordion-panel>
+                            <div class="faq-answer__inner">
+                                <p>No. Provider availability may vary by location, project type, timing, and
+                                    participating provider coverage.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. Pre-Footer CTA Card -->
+        <section class="prefooter-cta" aria-labelledby="home-prefooter-title">
+            <div class="prefooter-cta__media">
+                <img src="assets/images/hero-contact.jpg"
+                    alt="Bathroom background for walk-in tub provider comparison request" loading="lazy" width="1920"
+                    height="900">
+            </div>
+
+            <div class="prefooter-cta__content" data-aos="fade-up">
+                <p class="section-kicker">Start with clarity</p>
+                <h2 id="home-prefooter-title">
+                    Ready to Compare Walk-In Tub Provider Options?
+                </h2>
+                <p>
+                    Submit your project details and review available local options where participating providers are
+                    available.
+                </p>
+
+                <div class="btn-row">
+                    <a class="btn btn--gold" href="contact.html">
+                        <span>Submit Project Details</span>
+                        <i data-lucide="arrow-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="btn btn--outline-light" href="all-services.html">
+                        <span>Compare Provider Options</span>
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-wide footer__main">
+            <div class="footer__brand">
+                <a href="index.html" aria-label="MaisonTub home">
+                    <img src="assets/images/logo.svg" alt="MaisonTub logo" width="520" height="140">
+                </a>
+
+                <p class="footer__description" data-config="footer.description">
+                    MaisonTub helps homeowners organize walk-in tub project details and compare available local provider
+                    options.
+                </p>
+
+                <div class="footer__meta">
+                    <a href="tel:+18885550186" data-phone-link data-keep-content>
+                        <i data-lucide="phone" aria-hidden="true"></i>
+                        <span data-config="contact.phoneDisplay">(888) 555-0186</span>
+                    </a>
+
+                    <a href="mailto:hello@maisontub.com" data-email-link data-keep-content>
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                        <span data-config="contact.email">hello@maisontub.com</span>
+                    </a>
+
+                    <span>
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                        <span data-config="company.address">USA Service Area</span>
+                    </span>
+
+                    <span>
+                        <i data-lucide="badge-check" aria-hidden="true"></i>
+                        <span data-config="company.companyId">MT-WIT-2026</span>
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Navigation</h2>
+                <nav class="footer__links" data-footer-nav aria-label="Footer navigation"></nav>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Services</h2>
+                <nav class="footer__links" data-footer-services aria-label="Footer service navigation"></nav>
+            </div>
+
+            <div>
+                <h2 class="footer__title">Legal</h2>
+                <nav class="footer__links" data-footer-legal aria-label="Footer legal navigation"></nav>
+            </div>
+        </div>
+
+        <div class="footer__disclaimer">
+            <div class="container-wide">
+                <p data-config="legal.disclaimer">
+                    Disclaimer: This site is a free service to assist homeowners in connecting with local service
+                    providers.
+                </p>
+            </div>
+        </div>
+
+        <div class="container-wide footer__bottom">
+            <p data-config="footer.copyright">© 2026 MaisonTub. All rights reserved.</p>
+
+            <div class="footer__bottom-links">
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="terms-of-service.html">Terms</a>
+                <a href="cookie-policy.html">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/global.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
+</body>
+
+</html>

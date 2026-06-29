@@ -755,3 +755,194 @@
         grid-template-columns: 1fr 26px !important;
     }
 }
+
+/* ==============================
+   REDESIGN: SERVICE ICON STRIP BLOCK
+================================= */
+
+.service-icon-strip-block {
+    position: relative !important;
+    margin-top: 52px !important;
+    padding: 28px !important;
+    overflow: hidden !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 26px !important;
+    background: var(--color-dark) !important;
+    box-shadow: 0 22px 60px rgba(32, 32, 32, 0.18) !important;
+}
+
+.service-icon-strip-block::before {
+    content: "Explore other service paths";
+    display: block;
+    margin-bottom: 18px;
+
+    color: var(--color-gold) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.13em !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+}
+
+.service-icon-strip-block::after {
+    content: "";
+    position: absolute;
+    right: 28px;
+    bottom: 0;
+    left: 28px;
+    height: 3px;
+    border-radius: 999px 999px 0 0;
+    background: var(--color-gold);
+    opacity: 0.85;
+}
+
+.service-icon-strip-block .icon-strip {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+.service-icon-strip-block .service-icon-link {
+    position: relative !important;
+    display: grid !important;
+    place-items: center !important;
+    gap: 9px !important;
+
+    min-height: 104px !important;
+    padding: 16px 12px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 18px !important;
+    background: rgba(255, 255, 255, 0.045) !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+    text-align: center !important;
+    text-decoration: none !important;
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base),
+        box-shadow var(--transition-base) !important;
+}
+
+.service-icon-strip-block .service-icon-link:hover,
+.service-icon-strip-block .service-icon-link.is-active {
+    transform: translateY(-4px) !important;
+    border-color: rgba(214, 184, 120, 0.52) !important;
+    background: rgba(214, 184, 120, 0.1) !important;
+    color: var(--color-white) !important;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24) !important;
+}
+
+.service-icon-strip-block .service-icon-link.is-active {
+    border-color: rgba(37, 136, 140, 0.62) !important;
+    background: rgba(37, 136, 140, 0.16) !important;
+}
+
+.service-icon-strip-block .service-icon-link__icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 46px !important;
+    height: 46px !important;
+
+    border: 1px solid rgba(214, 184, 120, 0.24) !important;
+    border-radius: 15px !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: var(--color-gold) !important;
+
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base),
+        background-color var(--transition-base) !important;
+}
+
+.service-icon-strip-block .service-icon-link:hover .service-icon-link__icon,
+.service-icon-strip-block .service-icon-link.is-active .service-icon-link__icon {
+    transform: translateY(-2px) scale(1.04) !important;
+    color: var(--color-teal-hover) !important;
+    border-color: rgba(37, 136, 140, 0.46) !important;
+    background: rgba(37, 136, 140, 0.12) !important;
+}
+
+.service-icon-strip-block .service-icon-link svg {
+    width: 25px !important;
+    height: 25px !important;
+    stroke-width: 1.85 !important;
+}
+
+.service-icon-strip-block .service-icon-link__label {
+    display: block !important;
+    max-width: 100% !important;
+
+    color: inherit !important;
+    font-family: var(--font-heading) !important;
+    font-size: 0.64rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.075em !important;
+    line-height: 1.18 !important;
+    text-transform: uppercase !important;
+}
+
+@media (max-width: 980px) {
+    .service-icon-strip-block {
+        margin-top: 40px !important;
+        padding: 24px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-icon-strip-block .icon-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .service-icon-strip-block .service-icon-link {
+        min-height: 96px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-icon-strip-block {
+        padding: 20px 16px !important;
+        border-radius: 20px !important;
+    }
+
+    .service-icon-strip-block::before {
+        margin-bottom: 14px !important;
+        font-size: 0.66rem !important;
+    }
+
+    .service-icon-strip-block .icon-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+    }
+
+    .service-icon-strip-block .service-icon-link {
+        min-height: 86px !important;
+        padding: 13px 10px !important;
+        border-radius: 15px !important;
+    }
+
+    .service-icon-strip-block .service-icon-link__icon {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 13px !important;
+    }
+
+    .service-icon-strip-block .service-icon-link svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .service-icon-strip-block .service-icon-link__label {
+        font-size: 0.59rem !important;
+    }
+}

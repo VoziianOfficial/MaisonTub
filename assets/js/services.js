@@ -674,6 +674,38 @@
         refreshIcons();
     };
 
+    const initServiceIconStrip = () => {
+        const mounts = qsa('[data-service-icon-strip]');
+        if (!mounts.length || !services.length) return;
+
+        const currentServiceId = getServiceIdFromPage();
+
+        mounts.forEach((mount) => {
+            mount.innerHTML = services.map((service) => {
+                const isActive = service.id === currentServiceId;
+
+                return `
+                <a 
+                    class="service-icon-link${isActive ? ' is-active' : ''}" 
+                    href="${escapeHtml(service.url)}" 
+                    aria-label="${escapeHtml(service.title)}"
+                    title="${escapeHtml(service.title)}"
+                >
+                    <span class="service-icon-link__icon">
+                        ${createIcon(service.icon)}
+                    </span>
+
+                    <span class="service-icon-link__label">
+                        ${escapeHtml(service.shortTitle)}
+                    </span>
+                </a>
+            `;
+            }).join('');
+        });
+
+        refreshIcons();
+    };
+
     const initServiceFaqSchema = (service, content) => {
         if (!service || !content || qs('script[data-service-faq-schema]')) return;
 
@@ -704,6 +736,7 @@
         if (!page) return;
 
         initServiceTabs();
+        initServiceIconStrip();
         initAccordions();
         initServiceFaqSchema(page.service, page.content);
 
@@ -717,3 +750,4 @@
         initServicePage();
     }
 })();
+

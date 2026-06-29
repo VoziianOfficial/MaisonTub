@@ -2105,3 +2105,32 @@ p {
         font-size: 16px;
     }
 }
+
+/* ==============================
+   FIX: TRUE STICKY / FIXED HEADER
+================================= */
+
+.site-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 3000 !important;
+    width: 100% !important;
+}
+
+/* чтобы контент не залезал под fixed header */
+body {
+    padding-top: var(--header-height);
+}
+
+/* mobile menu должно начинаться ниже fixed header */
+.mobile-menu {
+    z-index: 2990 !important;
+    padding-top: var(--header-height);
+}
+
+/* dropdown должен быть поверх секций */
+.header__dropdown-menu {
+    z-index: 3100 !important;
+}

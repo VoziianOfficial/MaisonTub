@@ -89,7 +89,7 @@ window.MaisonTubConfig = {
             shortTitle: 'Installation',
             url: 'walk-in-tub-installation.html',
             icon: 'bath',
-            image: 'assets/images/service-1.jpg',
+            image: 'assets/images/service-3.jpg',
             heroImage: 'assets/images/hero-installation.jpg',
             description:
                 'Compare provider options for homeowners planning a new walk-in tub setup with attention to layout, access, comfort, and project scope.',
@@ -135,7 +135,7 @@ window.MaisonTubConfig = {
             shortTitle: 'Tub Conversion',
             url: 'tub-to-walk-in-tub-conversion.html',
             icon: 'repeat-2',
-            image: 'assets/images/service-3.jpg',
+            image: 'assets/images/card-conversion.jpg',
             heroImage: 'assets/images/hero-conversion.jpg',
             description:
                 'Explore provider-matching options for homeowners considering whether a traditional bathtub area may support a walk-in tub conversion.',

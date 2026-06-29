@@ -204,8 +204,8 @@ window.MaisonTubConfig = {
             shortTitle: 'Safety Features',
             url: 'accessible-bath-safety-features.html',
             icon: 'shield-check',
-            image: 'assets/images/service-6.jpg',
-            heroImage: 'assets/images/hero-safety.jpg',
+            image: 'assets/images/card-1.jpg',
+            heroImage: 'assets/images/service-3.jpg',
             description:
                 'Compare provider options that may discuss access-oriented features such as low thresholds, grab bars, seating, doors, and slip-resistant surfaces.',
             badge: 'Safety planning',

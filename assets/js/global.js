@@ -214,25 +214,177 @@
         });
     };
 
-    const injectContactLinks = () => {
+    const BUSINESS_DEFAULTS = {
+        brandName: 'MaisonTub',
+        legalName: 'MaisonTub Provider Matching Platform',
+        phoneRaw: '+18885550186',
+        phoneDisplay: '(888) 555-0186',
+        email: 'hello@maisontub.com',
+        address: 'USA Service Area',
+        companyId: 'MT-WIT-2026',
+        serviceArea: 'Independent provider matching across selected service areas',
+        supportHours: 'Mon–Fri, 8:00 AM–6:00 PM',
+        logoAlt: 'MaisonTub logo'
+    };
+
+    const normalizePhoneHref = (value) => {
+        return String(value || '').replace(/[^\d+]/g, '');
+    };
+
+    const replaceAllSafe = (value, replacements) => {
+        let output = String(value ?? '');
+
+        replacements.forEach(([from, to]) => {
+            if (!from || from === to) return;
+
+            output = output.split(from).join(to);
+        });
+
+        return output;
+    };
+
+    const getBusinessReplacements = () => {
+        return [
+            [BUSINESS_DEFAULTS.brandName, getValue('brand.name')],
+            [BUSINESS_DEFAULTS.legalName, getValue('company.legalName')],
+            [BUSINESS_DEFAULTS.phoneRaw, getValue('contact.phoneRaw')],
+            [BUSINESS_DEFAULTS.phoneDisplay, getValue('contact.phoneDisplay')],
+            [BUSINESS_DEFAULTS.email, getValue('contact.email')],
+            [BUSINESS_DEFAULTS.address, getValue('company.address')],
+            [BUSINESS_DEFAULTS.companyId, getValue('company.companyId')],
+            [BUSINESS_DEFAULTS.serviceArea, getValue('company.serviceArea')],
+            [BUSINESS_DEFAULTS.supportHours, getValue('company.supportHours')],
+            [BUSINESS_DEFAULTS.logoAlt, getValue('brand.logoAlt')]
+        ].filter(([from, to]) => from && to && from !== to);
+    };
+
+    const injectBusinessTextEverywhere = (scope = doc.body) => {
+        if (!scope) return;
+
+        const replacements = getBusinessReplacements();
+        if (!replacements.length) return;
+
+        const ignoredTags = new Set([
+            'SCRIPT',
+            'STYLE',
+            'NOSCRIPT',
+            'TEXTAREA',
+            'INPUT',
+            'SELECT',
+            'OPTION',
+            'SVG',
+            'PATH',
+            'CIRCLE',
+            'RECT',
+            'LINE',
+            'POLYGON',
+            'POLYLINE'
+        ]);
+
+        const walker = doc.createTreeWalker(
+            scope,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode(node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || ignoredTags.has(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.trim()) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const textNodes = [];
+
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+
+        textNodes.forEach((node) => {
+            node.nodeValue = replaceAllSafe(node.nodeValue, replacements);
+        });
+    };
+
+    const injectBusinessAttributesEverywhere = (scope = doc) => {
+        const replacements = getBusinessReplacements();
+
+        qsa('[aria-label]', scope).forEach((element) => {
+            element.setAttribute(
+                'aria-label',
+                replaceAllSafe(element.getAttribute('aria-label'), replacements)
+            );
+        });
+
+        qsa('[alt]', scope).forEach((element) => {
+            element.setAttribute(
+                'alt',
+                replaceAllSafe(element.getAttribute('alt'), replacements)
+            );
+        });
+
+        qsa('[title]', scope).forEach((element) => {
+            element.setAttribute(
+                'title',
+                replaceAllSafe(element.getAttribute('title'), replacements)
+            );
+        });
+
+        qsa('meta[name="description"]', scope).forEach((meta) => {
+            meta.setAttribute(
+                'content',
+                replaceAllSafe(meta.getAttribute('content'), replacements)
+            );
+        });
+
+        if (doc.title) {
+            doc.title = replaceAllSafe(doc.title, replacements);
+        }
+    };
+
+    const injectBrandAssets = (scope = doc) => {
+        const logo = getValue('brand.logo');
+        const logoAlt = getValue('brand.logoAlt', `${getValue('brand.name')} logo`);
+
+        if (!logo) return;
+
+        qsa('.header__logo, .footer__brand img, .mobile-menu__brand img, img[alt*="logo" i]', scope).forEach((img) => {
+            img.setAttribute('src', logo);
+            img.setAttribute('alt', logoAlt);
+        });
+
+        qsa('a[aria-label*="home" i]', scope).forEach((link) => {
+            link.setAttribute('aria-label', `${getValue('brand.name')} home`);
+        });
+    };
+
+    const injectContactLinks = (scope = doc) => {
         const phoneRaw = getValue('contact.phoneRaw');
         const phoneDisplay = getValue('contact.phoneDisplay');
         const email = getValue('contact.email');
         const mailSubject = getValue('contact.mailSubject');
         const address = getValue('company.address');
+        const brandName = getValue('brand.name');
 
-        qsa('[data-phone-link]').forEach((element) => {
-            element.setAttribute('href', `tel:${phoneRaw}`);
-            element.setAttribute('aria-label', `Call ${phoneDisplay}`);
+        const cleanPhone = normalizePhoneHref(phoneRaw);
+        const subject = mailSubject ? `?subject=${encodeURIComponent(mailSubject)}` : '';
+
+        qsa('[data-phone-link], a[href^="tel:"]', scope).forEach((element) => {
+            element.setAttribute('href', `tel:${cleanPhone}`);
+            element.setAttribute('aria-label', `Call ${phoneDisplay || brandName}`);
 
             if (!element.hasAttribute('data-keep-content')) {
                 element.textContent = phoneDisplay;
             }
         });
 
-        qsa('[data-email-link]').forEach((element) => {
-            const subject = mailSubject ? `?subject=${encodeURIComponent(mailSubject)}` : '';
-
+        qsa('[data-email-link], a[href^="mailto:"]', scope).forEach((element) => {
             element.setAttribute('href', `mailto:${email}${subject}`);
             element.setAttribute('aria-label', `Email ${email}`);
 
@@ -241,9 +393,48 @@
             }
         });
 
-        qsa('[data-address-text]').forEach((element) => {
+        qsa('[data-address-text]', scope).forEach((element) => {
             element.textContent = address;
         });
+    };
+
+    const injectFormConfig = (scope = doc) => {
+        const endpoint = getValue('form.endpoint');
+        const submitText = getValue('form.submitText');
+        const recipientEmail = getValue('form.recipientEmail') || getValue('contact.email');
+
+        qsa('form[data-contact-form]', scope).forEach((form) => {
+            if (endpoint) {
+                form.setAttribute('action', endpoint);
+            }
+
+            let recipientInput = qs('input[name="recipientEmail"]', form);
+
+            if (!recipientInput) {
+                recipientInput = doc.createElement('input');
+                recipientInput.type = 'hidden';
+                recipientInput.name = 'recipientEmail';
+                form.appendChild(recipientInput);
+            }
+
+            recipientInput.value = recipientEmail;
+        });
+
+        qsa('[data-submit-label]', scope).forEach((element) => {
+            if (submitText) {
+                element.textContent = submitText;
+            }
+        });
+    };
+
+    const injectBusinessConfigEverywhere = (scope = doc) => {
+        injectConfigText();
+        injectConfigAttributes();
+        injectContactLinks(scope);
+        injectBrandAssets(scope);
+        injectBusinessTextEverywhere(scope === doc ? doc.body : scope);
+        injectBusinessAttributesEverywhere(scope);
+        injectFormConfig(scope);
     };
 
     const injectSourcePageFields = () => {
@@ -744,10 +935,9 @@
     };
 
     const injectSharedComponents = () => {
-        injectConfigText();
-        injectConfigAttributes();
-        injectContactLinks();
+        injectBusinessConfigEverywhere();
         injectSourcePageFields();
+
         renderServiceOptions();
         renderHeaderServiceDropdown();
         renderFooterServices();
@@ -756,6 +946,32 @@
         renderMobileMenu();
         renderServiceIconStrip();
         renderCounters();
+
+        injectBusinessConfigEverywhere();
+    };
+
+    const initBusinessConfigObserver = () => {
+        let timer = null;
+
+        const observer = new MutationObserver((mutations) => {
+            const shouldRun = mutations.some((mutation) => {
+                return mutation.addedNodes && mutation.addedNodes.length;
+            });
+
+            if (!shouldRun) return;
+
+            window.clearTimeout(timer);
+
+            timer = window.setTimeout(() => {
+                injectBusinessConfigEverywhere();
+                refreshIcons();
+            }, 80);
+        });
+
+        observer.observe(doc.body, {
+            childList: true,
+            subtree: true
+        });
     };
 
     const initGlobal = () => {
@@ -768,9 +984,12 @@
         initMobileMenu();
         initAccordions();
         initCounterAnimation();
+        initBusinessConfigObserver();
 
         setActiveNav();
         renderCookieBanner();
+
+        injectBusinessConfigEverywhere();
 
         refreshIcons();
         initAOS();
@@ -790,6 +1009,7 @@
         initAccordions,
         renderServiceOptions,
         renderCounters,
+        injectBusinessConfigEverywhere,
         currentPage
     };
 

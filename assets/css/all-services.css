@@ -171,8 +171,16 @@
 }
 
 .category-item__photo {
-    min-height: 380px;
+    height: 380px;
     border-radius: var(--radius-md);
+}
+
+.category-item__photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
 }
 
 .category-item__content {
@@ -607,7 +615,7 @@
     .service-nav-strip__photo,
     .category-item__photo,
     .option-fit__photo {
-        min-height: 380px;
+        height: 380px;
     }
 
     .service-link-list {
@@ -627,7 +635,7 @@
     .service-nav-strip__photo,
     .category-item__photo,
     .option-fit__photo {
-        min-height: 320px;
+        height: 320px;
     }
 
     .service-link-row {
@@ -678,7 +686,7 @@
     .service-nav-strip__photo,
     .category-item__photo,
     .option-fit__photo {
-        min-height: 260px;
+        height: 260px;
     }
 
     .service-link-row {

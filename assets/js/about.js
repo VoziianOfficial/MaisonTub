@@ -33,14 +33,14 @@
         {
             number: 'Step 03',
             icon: 'git-compare',
-            title: 'Review provider options',
+            title: 'Review provider',
             text:
                 'Participating providers may respond with availability, quote details, scheduling information, product discussions, and service terms.'
         },
         {
             number: 'Step 04',
             icon: 'mouse-pointer-click',
-            title: 'Choose whether to continue',
+            title: 'Choose whether',
             text:
                 'Submitting a request does not create a service agreement. Homeowners decide whether a provider option fits their needs.'
         }
@@ -121,9 +121,9 @@
         const mount = qs('[data-journey-accordion]');
         if (!mount) return;
 
-        mount.innerHTML = journeySteps.map((step, index) => `
-            <article class="journey-step${index === 0 ? ' is-active' : ''}" data-journey-step>
-                <button class="journey-step__button" type="button" aria-expanded="${index === 0 ? 'true' : 'false'}">
+        mount.innerHTML = journeySteps.map((step) => `
+            <article class="journey-step" data-journey-step>
+                <button class="journey-step__button" type="button" aria-expanded="false">
                     <span class="journey-step__number">${escapeHtml(step.number)}</span>
 
                     <span class="journey-step__icon">
@@ -150,8 +150,6 @@
                     otherStep.classList.toggle('is-active', isActive);
                     qs('.journey-step__button', otherStep)?.setAttribute('aria-expanded', String(isActive));
                 });
-
-                refreshAOS();
             });
         });
 

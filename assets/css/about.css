@@ -369,40 +369,76 @@
 .journey-accordion {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    min-height: 430px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    background: var(--color-off-white);
+    gap: 16px;
+    align-items: start;
+    min-height: auto;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
 }
 
 .journey-step {
     position: relative;
     display: grid;
-    grid-template-rows: auto 1fr;
-    padding: 28px;
-    border-right: 1px solid var(--color-border);
+    grid-template-rows: auto auto;
+    min-height: 205px;
+    padding: 26px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
     background: var(--color-white);
+    color: var(--color-dark);
     cursor: pointer;
+    box-shadow: 0 14px 38px rgba(32, 32, 32, 0.06);
     transition:
+        min-height 420ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
         background-color var(--transition-base),
         color var(--transition-base),
-        grid-template-columns var(--transition-base);
+        opacity var(--transition-base);
 }
 
-.journey-step:last-child {
-    border-right: 0;
+.journey-step::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    left: 24px;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 999px 999px 0 0;
+    background: var(--color-gold);
+    transition: transform var(--transition-base);
 }
 
+.journey-step:hover,
+.journey-step:focus-within,
 .journey-step.is-active {
-    background: var(--color-dark);
-    color: var(--color-white);
+    min-height: 330px;
+    transform: translateY(-4px);
+    border-color: rgba(37, 136, 140, 0.48);
+    background: var(--color-white);
+    color: var(--color-dark);
+    box-shadow: 0 22px 60px rgba(32, 32, 32, 0.11);
+}
+
+.journey-step:hover::after,
+.journey-step:focus-within::after,
+.journey-step.is-active::after {
+    transform: scaleX(1);
 }
 
 .journey-step__button {
+    position: relative;
     display: grid;
-    gap: 16px;
+    gap: 14px;
     width: 100%;
+    min-height: 150px;
+    padding: 0;
     border: 0;
     background: transparent;
     color: inherit;
@@ -416,60 +452,85 @@
     font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
+    transition: color var(--transition-base);
 }
 
+.journey-step:hover .journey-step__number,
+.journey-step:focus-within .journey-step__number,
 .journey-step.is-active .journey-step__number {
-    color: var(--color-gold);
+    color: var(--color-gold-active);
 }
 
 .journey-step h3 {
-    font-size: clamp(1rem, 1.7vw, 1.42rem);
+    max-width: 82%;
+    margin-top: 60px;
+    font-size: clamp(1rem, 1.55vw, 1.34rem);
+    line-height: 1.12;
 }
 
 .journey-step__icon {
     position: absolute;
-    top: 26px;
-    right: 26px;
+    top: 0;
+    right: 0;
     color: var(--color-teal);
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base);
 }
 
+.journey-step:hover .journey-step__icon,
+.journey-step:focus-within .journey-step__icon,
 .journey-step.is-active .journey-step__icon {
     color: var(--color-gold);
+    transform: translateY(-3px);
 }
 
 .journey-step__icon svg {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
+    stroke-width: 1.75;
 }
 
 .journey-step__content {
     display: grid;
-    align-content: end;
+    align-content: start;
     max-height: 0;
+    margin-top: 0;
     overflow: hidden;
     opacity: 0;
     transition:
         max-height 420ms ease,
-        opacity 260ms ease;
+        opacity 260ms ease,
+        margin-top 320ms ease;
 }
 
+.journey-step:hover .journey-step__content,
+.journey-step:focus-within .journey-step__content,
 .journey-step.is-active .journey-step__content {
-    max-height: 260px;
+    max-height: 200px;
     opacity: 1;
+    margin-top: 18px;
 }
 
 .journey-step__content p {
-    color: var(--color-dark-muted);
-}
-
-.journey-step:not(.is-active) .journey-step__content p {
     color: var(--color-muted);
+    margin: 0;
 }
 
 .journey-step__line {
     width: 58px;
     height: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    background: var(--color-teal);
+    transition:
+        width var(--transition-base),
+        background-color var(--transition-base);
+}
+
+.journey-step:hover .journey-step__line,
+.journey-step:focus-within .journey-step__line,
+.journey-step.is-active .journey-step__line {
+    width: 82px;
     background: var(--color-gold);
 }
 
@@ -691,19 +752,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .journey-step {
-        border-right: 1px solid var(--color-border);
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .journey-step:nth-child(2n) {
-        border-right: 0;
-    }
-
-    .journey-step:nth-last-child(-n + 2) {
-        border-bottom: 0;
-    }
-
     .trust-principles__grid {
         grid-template-columns: 1fr;
     }
@@ -784,21 +832,33 @@
         min-height: auto;
     }
 
-    .journey-step,
-    .journey-step:nth-child(2n),
-    .journey-step:nth-last-child(-n + 2) {
-        border-right: 0;
-        border-bottom: 1px solid var(--color-border);
+    .journey-step {
+        min-height: 190px;
+        padding: 24px 22px;
     }
 
-    .journey-step:last-child {
-        border-bottom: 0;
+    .journey-step:hover,
+    .journey-step:focus-within,
+    .journey-step.is-active {
+        min-height: 290px;
+        transform: none;
     }
 
-    .journey-step__content {
-        max-height: none;
+    .journey-step__icon svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .journey-step h3 {
+        max-width: calc(100% - 54px);
+        margin-top: 54px;
+    }
+
+    .journey-step.is-active .journey-step__content,
+    .journey-step:focus-within .journey-step__content {
+        max-height: 220px;
         opacity: 1;
-        margin-top: 26px;
+        margin-top: 18px;
     }
 
     .journey-step:not(.is-active) .journey-step__content {
@@ -837,7 +897,7 @@
     }
 
     .journey-step {
-        padding: 24px 18px;
+        padding: 22px 18px;
     }
 
     .journey-step__icon svg {

@@ -1917,9 +1917,7 @@
     border: 0 !important;
 }
 
-.transparency-slide__detail:first-child {
-    padding-left: 0 !important;
-}
+
 
 .transparency-slide__detail:not(:last-child)::after {
     content: "";

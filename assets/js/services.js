@@ -50,7 +50,7 @@
                     ['Credential verification', 'Homeowners should verify licensing, insurance, permits, and credentials before continuing.', 'badge-check']
                 ]
             ],
-            comparisonPhoto: 'assets/images/service-1.jpg',
+            comparisonPhoto: 'assets/images/service-3.jpg',
             faq: [
                 ['Does MaisonTub install walk-in tubs?', 'No. MaisonTub is an independent provider-matching platform and does not install, sell, repair, inspect, manufacture, or directly provide walk-in tub services.'],
                 ['What installation details should I include?', 'Helpful details may include bathroom layout, current tub area, access preferences, timing, desired comfort features, and any space limitations.'],

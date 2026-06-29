@@ -89,8 +89,8 @@ window.MaisonTubConfig = {
             shortTitle: 'Installation',
             url: 'walk-in-tub-installation.html',
             icon: 'bath',
-            image: 'assets/images/service-3.jpg',
-            heroImage: 'assets/images/hero-installation.jpg',
+            image: 'assets/images/card-5.jpg',
+            heroImage: 'assets/images/service-1.jpg',
             description:
                 'Compare provider options for homeowners planning a new walk-in tub setup with attention to layout, access, comfort, and project scope.',
             badge: 'Most requested',

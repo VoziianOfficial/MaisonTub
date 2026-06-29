@@ -173,17 +173,38 @@
         }
     ];
 
-    const setImage = (image, src, alt) => {
-        if (!image) return;
+    const setImage = (() => {
+        let timer = null;
 
-        image.style.opacity = '0';
+        return (image, src, alt) => {
+            if (!image) return;
+            if (image.getAttribute('src') === src) return;
 
-        window.setTimeout(() => {
-            image.src = src;
-            image.alt = alt;
-            image.style.opacity = '1';
-        }, 160);
-    };
+            if (timer) {
+                window.clearTimeout(timer);
+                timer = null;
+            }
+
+            image.classList.add('is-changing');
+
+            timer = window.setTimeout(() => {
+                const finish = () => {
+                    image.classList.remove('is-changing');
+                    image.onload = null;
+                };
+
+                image.onload = finish;
+                image.src = src;
+                image.alt = alt;
+
+                if (image.complete) {
+                    window.setTimeout(finish, 80);
+                }
+
+                timer = null;
+            }, 120);
+        };
+    })();
 
     const getServiceById = (id) => {
         return services.find((service) => service.id === id) || services[0];
@@ -326,8 +347,10 @@
             </button>
         `).join('');
 
-        const setActive = (index) => {
+        const setActive = (index, force = false) => {
             const item = comfortItems[index] || comfortItems[0];
+            if (!force && homeState.activeComfort === index) return;
+
             homeState.activeComfort = index;
 
             qsa('[data-comfort-button]', list).forEach((button) => {
@@ -338,20 +361,20 @@
             });
 
             setImage(image, item.image, item.label);
+
             label.textContent = item.label;
             title.textContent = item.title;
             text.textContent = item.text;
 
             note.innerHTML = `
-                ${createIcon(item.icon)}
-                <div>
-                    <strong>${escapeHtml(item.noteTitle)}</strong>
-                    <p>${escapeHtml(item.note)}</p>
-                </div>
-            `;
+        ${createIcon(item.icon)}
+        <div>
+            <strong>${escapeHtml(item.noteTitle)}</strong>
+            <p>${escapeHtml(item.note)}</p>
+        </div>
+    `;
 
             refreshIcons();
-            refreshAOS();
         };
 
         list.addEventListener('click', (event) => {
@@ -361,14 +384,7 @@
             setActive(Number(button.getAttribute('data-comfort-button')));
         });
 
-        list.addEventListener('mouseover', (event) => {
-            const button = event.target.closest('[data-comfort-button]');
-            if (!button || window.innerWidth < 980) return;
-
-            setActive(Number(button.getAttribute('data-comfort-button')));
-        });
-
-        setActive(0);
+        setActive(0, true);
     };
 
     const initTransparencySlider = () => {

@@ -182,7 +182,7 @@ window.MaisonTubConfig = {
             url: 'hydrotherapy-walk-in-tub-options.html',
             icon: 'waves',
             image: 'assets/images/service-5.jpg',
-            heroImage: 'assets/images/hero-hydrotherapy.jpg',
+            heroImage: 'assets/images/service-1.jpg',
             description:
                 'Review local provider options that may include hydrotherapy-style comfort features, soaking preferences, and model discussions.',
             badge: 'Comfort focused',

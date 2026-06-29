@@ -210,7 +210,7 @@
                     ['Final quote terms', 'Final pricing, scheduling, and agreements come from participating providers.', 'file-text']
                 ]
             ],
-            comparisonPhoto: 'assets/images/service-5.jpg',
+            comparisonPhoto: 'assets/images/card-6.jpg',
             faq: [
                 ['Does MaisonTub provide hydrotherapy products?', 'No. MaisonTub does not sell, install, repair, inspect, manufacture, or directly provide walk-in tubs or hydrotherapy products.'],
                 ['Does MaisonTub provide medical advice?', 'No. MaisonTub does not provide medical, health, or mobility advice. Comfort-focused feature discussions come from participating providers.'],

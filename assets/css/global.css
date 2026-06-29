@@ -2153,3 +2153,69 @@ body {
 .header__dropdown-menu {
     z-index: 3100 !important;
 }
+
+
+/* ==============================
+   FIX: WIDER HERO TEXT AREA
+   Applies to all shared hero sections
+================================= */
+
+.shared-hero__text {
+    max-width: min(980px, 72vw) !important;
+}
+
+.shared-hero h1 {
+    max-width: 980px !important;
+}
+
+.shared-hero__lead {
+    max-width: 720px !important;
+}
+
+/* чтобы текст не был слишком узким на service pages */
+.service-main .shared-hero__text,
+.all-services-main .shared-hero__text,
+.contact-main .shared-hero__text,
+.about-main .shared-hero__text,
+.home-main .shared-hero__text {
+    max-width: min(1020px, 74vw) !important;
+}
+
+.service-main .shared-hero h1,
+.all-services-main .shared-hero h1,
+.contact-main .shared-hero h1,
+.about-main .shared-hero h1,
+.home-main .shared-hero h1 {
+    max-width: 1020px !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+
+    .shared-hero__text,
+    .service-main .shared-hero__text,
+    .all-services-main .shared-hero__text,
+    .contact-main .shared-hero__text,
+    .about-main .shared-hero__text,
+    .home-main .shared-hero__text {
+        max-width: 760px !important;
+    }
+
+    .shared-hero h1 {
+        max-width: 760px !important;
+    }
+
+    .shared-hero__lead {
+        max-width: 640px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+
+    .shared-hero__text,
+    .shared-hero h1,
+    .shared-hero__lead {
+        max-width: 100% !important;
+    }
+}

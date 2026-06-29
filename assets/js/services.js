@@ -21,7 +21,7 @@
     const serviceContent = {
         installation: {
             eyebrow: 'Installation options',
-            h1: 'Compare Walk-In Tub Installation Provider Options',
+            h1: 'Walk-in Tub Installation',
             lead:
                 'Submit installation project details and review available local provider options where participating providers are available.',
             overviewTitle: 'Start a New Walk-In Tub Installation Request With Clear Details',
@@ -61,7 +61,7 @@
 
         replacement: {
             eyebrow: 'Replacement options',
-            h1: 'Compare Walk-In Tub Replacement Provider Options',
+            h1: 'Walk-in Tub Replacement',
             lead:
                 'Organize replacement details and compare available provider responses for updating an existing tub or older walk-in tub.',
             overviewTitle: 'Review Replacement Paths Before Choosing a Provider',
@@ -101,7 +101,7 @@
 
         conversion: {
             eyebrow: 'Tub conversion options',
-            h1: 'Compare Tub-to-Walk-In Tub Conversion Options',
+            h1: 'Walk-in Tub Conversion',
             lead:
                 'Share details about an existing bathtub area and compare provider options for a possible walk-in tub conversion path.',
             overviewTitle: 'Clarify Whether a Conversion Path Fits the Current Bathing Area',
@@ -141,7 +141,7 @@
 
         compact: {
             eyebrow: 'Compact options',
-            h1: 'Compare Compact Walk-In Tub Provider Options',
+            h1: 'Compact Walk-In Tub Options',
             lead:
                 'Submit details for smaller bathrooms and compare available provider options for compact walk-in tub planning.',
             overviewTitle: 'Organize Compact Bathroom Details Before Provider Conversations',
@@ -181,7 +181,7 @@
 
         hydrotherapy: {
             eyebrow: 'Hydrotherapy options',
-            h1: 'Compare Hydrotherapy Walk-In Tub Options',
+            h1: 'Hydrotherapy Walk-In Tub Options',
             lead:
                 'Review provider-matching options for comfort-focused walk-in tub feature discussions where available.',
             overviewTitle: 'Compare Comfort-Focused Feature Discussions Without Direct Product Claims',
@@ -221,7 +221,7 @@
 
         safety: {
             eyebrow: 'Safety feature options',
-            h1: 'Compare Accessible Bath Safety Feature Options',
+            h1: 'Accessible Bathing Options',
             lead:
                 'Share access and safety-feature preferences and compare available provider options where participating providers are available.',
             overviewTitle: 'Organize Accessible Bathing Preferences Before Comparing Providers',

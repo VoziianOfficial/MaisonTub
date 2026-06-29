@@ -570,3 +570,200 @@
         height: 240px;
     }
 }
+
+/* ==============================
+   REDESIGN: SERVICE SELECTION HELP ITEMS
+   compact premium selector tiles
+================================= */
+
+.selection-help__items {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    margin-inline: auto !important;
+}
+
+/* теперь это не высокие карточки, а низкие selector-плашки */
+.selection-help__button {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 42px 1fr !important;
+    gap: 12px !important;
+    align-items: center !important;
+    align-content: center !important;
+
+    width: 100% !important;
+    min-height: 74px !important;
+    height: auto !important;
+    padding: 14px 16px !important;
+
+    overflow: hidden !important;
+    border: 1px solid rgba(32, 32, 32, 0.12) !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.82) !important;
+    color: var(--color-dark) !important;
+    text-align: left !important;
+
+    box-shadow: 0 12px 30px rgba(32, 32, 32, 0.055) !important;
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base),
+        color var(--transition-base) !important;
+}
+
+/* золотая нижняя линия */
+.selection-help__button::after {
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 999px 999px 0 0;
+    background: var(--color-gold);
+    transition: transform var(--transition-base);
+}
+
+/* маленький акцент слева */
+.selection-help__button::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 0;
+    width: 3px;
+    transform: scaleY(0);
+    transform-origin: center;
+    border-radius: 999px;
+    background: var(--color-teal);
+    transition: transform var(--transition-base);
+}
+
+.selection-help__button:hover,
+.selection-help__button.is-active {
+    transform: translateY(-3px) !important;
+    border-color: rgba(37, 136, 140, 0.45) !important;
+    background: var(--color-white) !important;
+    box-shadow: 0 18px 42px rgba(32, 32, 32, 0.09) !important;
+}
+
+.selection-help__button:hover::after,
+.selection-help__button.is-active::after {
+    transform: scaleX(1);
+}
+
+.selection-help__button:hover::before,
+.selection-help__button.is-active::before {
+    transform: scaleY(1);
+}
+
+/* иконка теперь слева в аккуратном квадрате */
+.selection-help__button-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+
+    border: 1px solid rgba(37, 136, 140, 0.18) !important;
+    border-radius: 13px !important;
+    background: rgba(37, 136, 140, 0.07) !important;
+    color: var(--color-teal) !important;
+
+    transition:
+        color var(--transition-base),
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-base) !important;
+}
+
+.selection-help__button-icon svg {
+    width: 22px !important;
+    height: 22px !important;
+    stroke-width: 1.9 !important;
+}
+
+.selection-help__button:hover .selection-help__button-icon,
+.selection-help__button.is-active .selection-help__button-icon {
+    color: var(--color-gold) !important;
+    border-color: rgba(214, 184, 120, 0.42) !important;
+    background: rgba(214, 184, 120, 0.12) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* название справа */
+.selection-help__button span:last-child {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--color-dark) !important;
+    font-family: var(--font-heading) !important;
+    font-size: 0.76rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.075em !important;
+    line-height: 1.18 !important;
+    text-transform: uppercase !important;
+}
+
+.selection-help__button:hover span:last-child,
+.selection-help__button.is-active span:last-child {
+    color: var(--color-dark) !important;
+}
+
+/* text-card чуть ближе к новым компактным кнопкам */
+.selection-help__text-card {
+    margin-top: 22px !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .selection-help__items {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+
+    .selection-help__button {
+        min-height: 70px !important;
+        padding: 13px 15px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .selection-help__items {
+        grid-template-columns: 1fr !important;
+    }
+
+    .selection-help__button {
+        min-height: 66px !important;
+        grid-template-columns: 38px 1fr !important;
+        gap: 11px !important;
+        padding: 12px 14px !important;
+        border-radius: 14px !important;
+    }
+
+    .selection-help__button-icon {
+        width: 38px !important;
+        height: 38px !important;
+        border-radius: 12px !important;
+    }
+
+    .selection-help__button-icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .selection-help__button span:last-child {
+        font-size: 0.7rem !important;
+        line-height: 1.16 !important;
+    }
+}

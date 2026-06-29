@@ -465,7 +465,6 @@
 
 .factor-card {
     position: relative;
-    min-height: 260px;
     padding: 28px;
     overflow: hidden;
     border: 1px solid var(--color-border);

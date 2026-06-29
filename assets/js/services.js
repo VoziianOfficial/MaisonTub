@@ -293,7 +293,7 @@
         },
         {
             id: 'choose',
-            icon: 'hand-pointer',
+            icon: 'mouse-pointer-click',
             label: 'Choose next step',
             title: 'You choose whether to continue.',
             text:

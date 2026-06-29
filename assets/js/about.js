@@ -39,7 +39,7 @@
         },
         {
             number: 'Step 04',
-            icon: 'hand-pointer',
+            icon: 'mouse-pointer-click',
             title: 'Choose whether to continue',
             text:
                 'Submitting a request does not create a service agreement. Homeowners decide whether a provider option fits their needs.'
@@ -104,7 +104,7 @@
                 'MaisonTub clearly separates platform matching from final provider services, pricing, scheduling, warranties, and project terms.'
         },
         {
-            icon: 'hand-pointer',
+            icon: 'mouse-pointer-click',
             title: 'Homeowner Choice',
             text:
                 'Homeowners can review available provider responses and decide whether they want to continue with any provider.'

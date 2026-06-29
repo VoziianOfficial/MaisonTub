@@ -145,7 +145,7 @@
                 'Final pricing, warranties, scheduling, licensing, insurance, and service terms come from participating providers.'
         },
         {
-            icon: 'hand-pointer',
+            icon: 'mouse-pointer-click',
             title: 'Homeowner choice',
             text:
                 'Submitting a request does not create a service agreement. Homeowners choose whether to continue.'

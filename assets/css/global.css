@@ -98,6 +98,21 @@ img {
     object-fit: cover;
 }
 
+[data-lucide],
+svg[data-lucide],
+.icon svg,
+.btn svg,
+.card-icon svg {
+    display: block;
+    flex-shrink: 0;
+}
+
+[data-lucide],
+.icon svg {
+    width: 1em;
+    height: 1em;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -667,6 +682,7 @@ p {
 .header__dropdown-trigger svg {
     width: 16px;
     height: 16px;
+    color: var(--color-gold);
     transition: transform var(--transition-base);
 }
 
@@ -772,6 +788,7 @@ p {
 .header-action svg {
     width: 19px;
     height: 19px;
+    color: var(--color-gold);
 }
 
 .menu-toggle {
@@ -1135,6 +1152,7 @@ p {
 .hero-float-card__icon i {
     width: 34px;
     height: 34px;
+    opacity: 1;
 }
 
 .hero-float-card h3 {
@@ -1363,6 +1381,7 @@ p {
     height: 22px;
     flex: 0 0 auto;
     color: var(--color-teal);
+    opacity: 1;
     transition: transform var(--transition-base);
 }
 

@@ -236,7 +236,7 @@ window.MaisonTubConfig = {
                 text: 'Review available provider responses where participating providers are available.'
             },
             {
-                icon: 'hand-pointer',
+                icon: 'mouse-pointer-click',
                 title: 'You Choose',
                 text: 'Decide whether to continue with a provider after reviewing terms.'
             }

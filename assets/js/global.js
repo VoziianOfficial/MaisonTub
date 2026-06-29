@@ -5,6 +5,54 @@
     const doc = document;
     const root = doc.documentElement;
     const body = doc.body;
+    const FALLBACK_ICON = 'circle-dot';
+    const ICON_NAME_ALIASES = {
+        'hand-pointer': 'mouse-pointer-click'
+    };
+    const SUPPORTED_ICON_NAMES = new Set([
+        'arrow-down',
+        'arrow-left',
+        'arrow-right',
+        'arrow-right-left',
+        'arrow-up',
+        'arrow-up-right',
+        'badge-alert',
+        'badge-check',
+        'bath',
+        'box-select',
+        'calendar-clock',
+        'check-circle-2',
+        'chevron-down',
+        'circle-dot',
+        'clipboard-list',
+        'clock',
+        'compass',
+        'door-open',
+        'file-check-2',
+        'file-search',
+        'file-text',
+        'git-compare',
+        'inbox',
+        'info',
+        'layout-panel-left',
+        'layers',
+        'list-checks',
+        'mail',
+        'map-pin',
+        'maximize-2',
+        'mouse-pointer-click',
+        'phone',
+        'plus',
+        'refresh-cw',
+        'repeat-2',
+        'route',
+        'ruler',
+        'send',
+        'shield-check',
+        'sliders-horizontal',
+        'waves',
+        'x-circle'
+    ]);
 
     const qs = (selector, scope = doc) => scope.querySelector(selector);
     const qsa = (selector, scope = doc) => Array.from(scope.querySelectorAll(selector));
@@ -39,8 +87,44 @@
             .replaceAll("'", '&#039;');
     };
 
+    const toLucideModuleKey = (iconName) => {
+        return String(iconName || '')
+            .split('-')
+            .map((part) => part ? part.charAt(0).toUpperCase() + part.slice(1) : '')
+            .join('');
+    };
+
+    const isSupportedIconName = (iconName) => {
+        if (!iconName) return false;
+
+        const normalized = String(iconName).trim();
+        if (!normalized) return false;
+
+        if (SUPPORTED_ICON_NAMES.has(normalized)) {
+            return true;
+        }
+
+        if (window.lucide) {
+            const moduleKey = toLucideModuleKey(normalized);
+            return typeof window.lucide[moduleKey] !== 'undefined';
+        }
+
+        return false;
+    };
+
+    const normalizeIconName = (iconName) => {
+        const requestedIcon = String(iconName || '').trim();
+        const aliasedIcon = ICON_NAME_ALIASES[requestedIcon] || requestedIcon;
+
+        if (isSupportedIconName(aliasedIcon)) {
+            return aliasedIcon;
+        }
+
+        return FALLBACK_ICON;
+    };
+
     const createIcon = (iconName, extraClass = '') => {
-        const safeIcon = escapeHtml(iconName || 'arrow-right');
+        const safeIcon = escapeHtml(normalizeIconName(iconName || FALLBACK_ICON));
         const safeClass = extraClass ? ` ${escapeHtml(extraClass)}` : '';
 
         return `<i class="icon${safeClass}" data-lucide="${safeIcon}" aria-hidden="true"></i>`;
@@ -57,6 +141,13 @@
     };
 
     const refreshIcons = () => {
+        qsa('[data-lucide]').forEach((iconElement) => {
+            const normalizedIcon = normalizeIconName(iconElement.getAttribute('data-lucide'));
+            if (normalizedIcon !== iconElement.getAttribute('data-lucide')) {
+                iconElement.setAttribute('data-lucide', normalizedIcon);
+            }
+        });
+
         if (window.lucide && typeof window.lucide.createIcons === 'function') {
             window.lucide.createIcons({
                 attrs: {
@@ -197,6 +288,8 @@
                     </a>
                 `;
             }).join('');
+
+            refreshIcons();
         });
     };
 
@@ -289,6 +382,8 @@
                 </div>
             </div>
         `;
+
+        refreshIcons();
     };
 
     const setActiveNav = () => {
@@ -567,6 +662,8 @@
 
         qs('[data-cookie-accept]', banner)?.addEventListener('click', () => saveChoice('accepted'));
         qs('[data-cookie-decline]', banner)?.addEventListener('click', () => saveChoice('declined'));
+
+        refreshIcons();
     };
 
     const renderServiceIconStrip = () => {
@@ -578,6 +675,8 @@
                     ${createIcon(service.icon)}
                 </a>
             `).join('');
+
+            refreshIcons();
         });
     };
 
@@ -685,6 +784,7 @@
         getValue,
         escapeHtml,
         createIcon,
+        normalizeIconName,
         refreshIcons,
         refreshAOS,
         initAccordions,

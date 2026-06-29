@@ -276,7 +276,7 @@
                     'Provider availability may vary by location, timing, project category, and provider participation.'
             },
             {
-                icon: 'hand-pointer',
+                icon: 'mouse-pointer-click',
                 title: 'You choose whether to continue',
                 text:
                     'Submitting a request does not create a service agreement with MaisonTub or any provider.'

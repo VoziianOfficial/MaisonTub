@@ -161,7 +161,7 @@
             ]
         },
         {
-            icon: 'hand-pointer',
+            icon: 'mouse-pointer-click',
             title: 'You decide the next step.',
             text:
                 'Submitting a request does not create a service agreement. After provider responses are available, homeowners can review the information and choose whether they want to continue.',

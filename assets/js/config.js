@@ -135,8 +135,8 @@ window.MaisonTubConfig = {
             shortTitle: 'Tub Conversion',
             url: 'tub-to-walk-in-tub-conversion.html',
             icon: 'repeat-2',
-            image: 'assets/images/service-3.jpg',
-            heroImage: 'assets/images/hero-conversion.jpg',
+            image: 'assets/images/card-3.jpg',
+            heroImage: 'assets/images/service-6.jpg',
             description:
                 'Explore provider-matching options for homeowners considering whether a traditional bathtub area may support a walk-in tub conversion.',
             badge: 'Layout planning',

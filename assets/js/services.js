@@ -130,7 +130,7 @@
                     ['Terms and credentials', 'Homeowners should verify licensing, insurance, warranties, and service terms directly.', 'badge-check']
                 ]
             ],
-            comparisonPhoto: 'assets/images/service-3.jpg',
+            comparisonPhoto: 'assets/images/card-8.jpg',
             faq: [
                 ['Does MaisonTub perform tub conversions?', 'No. MaisonTub does not convert, install, replace, repair, inspect, sell, or manufacture walk-in tubs. It helps with provider matching.'],
                 ['Can every bathtub be converted?', 'MaisonTub does not determine feasibility. Participating providers discuss final feasibility, scope, pricing, and terms.'],

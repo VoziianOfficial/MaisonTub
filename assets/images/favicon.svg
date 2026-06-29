@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="faviconTitle">
+  <title id="faviconTitle">MaisonTub favicon</title>
+  <rect width="512" height="512" rx="108" fill="#202020"/>
+  <circle cx="164" cy="104" r="24" fill="#4E9DA3" stroke="#F8F7F3" stroke-width="10"/>
+  <circle cx="126" cy="170" r="30" fill="#A7E3E4" stroke="#F8F7F3" stroke-width="10"/>
+  <circle cx="84" cy="124" r="8" fill="#F8F7F3"/>
+  <circle cx="182" cy="192" r="8" fill="#F8F7F3"/>
+  <circle cx="226" cy="122" r="7" fill="#D6B878"/>
+  <path d="M285 125C285 141 273 141 273 162C273 183 285 183 285 201" stroke="#F8F7F3" stroke-width="10" stroke-linecap="round"/>
+  <path d="M329 138C329 153 319 153 319 172C319 191 329 191 329 209" stroke="#F8F7F3" stroke-width="10" stroke-linecap="round"/>
+  <path d="M372 125C372 141 360 141 360 162C360 183 372 183 372 201" stroke="#F8F7F3" stroke-width="10" stroke-linecap="round"/>
+  <path d="M66 274H442V328C442 370 408 404 366 404H150C108 404 66 370 66 328V274Z" fill="#7FA7E8" stroke="#F8F7F3" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M89 274H419V318C419 351 392 378 359 378H161C121 378 89 346 89 306V274Z" fill="#89A5E6"/>
+  <path d="M89 274H419V305H89V274Z" fill="#25888C" opacity="0.94"/>
+  <path d="M80 264H438" stroke="#D6B878" stroke-width="6" stroke-linecap="round"/>
+  <path d="M72 244H438C451 244 462 255 462 268C462 281 451 292 438 292H72C59 292 48 281 48 268C48 255 59 244 72 244Z" fill="#6F8FE0" stroke="#F8F7F3" stroke-width="10"/>
+  <path d="M73 255H437C444 255 450 261 450 268C450 275 444 281 437 281H73C66 281 60 275 60 268C60 261 66 255 73 255Z" fill="#4E9DA3"/>
+  <path d="M129 224H211C225 224 237 236 237 250V355C237 363 231 369 223 369H193C185 369 179 363 179 355V337H154C129 337 108 316 108 291V245C108 233 117 224 129 224Z" fill="#25888C" stroke="#F8F7F3" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M179 283V355C179 363 185 369 193 369H223C231 369 237 363 237 355V250C237 236 225 224 211 224H129" fill="#A7E3E4" opacity="0.35"/>
+  <path d="M169 270V284" stroke="#F8F7F3" stroke-width="9" stroke-linecap="round"/>
+  <path d="M237 281H371" stroke="#F8F7F3" stroke-width="9" stroke-linecap="round"/>
+  <path d="M405 281H437" stroke="#F8F7F3" stroke-width="9" stroke-linecap="round"/>
+</svg>

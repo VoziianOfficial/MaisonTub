@@ -1,18 +1,33 @@
-<svg width="520" height="140" viewBox="0 0 520 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="520" height="140" fill="transparent"/>
+<svg width="980" height="260" viewBox="0 0 980 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">MaisonTub logo</title>
+  <desc id="logoDesc">Walk-in tub icon with MaisonTub wordmark in one line.</desc>
 
-  <!-- Decorative premium line -->
-  <line x1="22" y1="108" x2="498" y2="108" stroke="#D6B878" stroke-width="3" stroke-linecap="round"/>
+  <g transform="translate(0 8) scale(0.38)">
+    <circle cx="220" cy="118" r="31" fill="#4E9DA3" stroke="#F8F7F3" stroke-width="14"/>
+    <circle cx="175" cy="205" r="42" fill="#A7E3E4" stroke="#F8F7F3" stroke-width="14"/>
+    <circle cx="118" cy="145" r="10" fill="#F8F7F3"/>
+    <circle cx="240" cy="238" r="11" fill="#F8F7F3"/>
+    <circle cx="292" cy="146" r="8" fill="#D6B878"/>
+    <path d="M374 157C374 179 358 179 358 207C358 235 374 235 374 259" stroke="#F8F7F3" stroke-width="14" stroke-linecap="round"/>
+    <path d="M434 176C434 196 421 196 421 221C421 246 434 246 434 270" stroke="#F8F7F3" stroke-width="14" stroke-linecap="round"/>
+    <path d="M493 157C493 179 477 179 477 207C477 235 493 235 493 259" stroke="#F8F7F3" stroke-width="14" stroke-linecap="round"/>
+    <path d="M91 350H599V425C599 479 555 523 501 523H192C136 523 91 478 91 422V350Z" fill="#7FA7E8" stroke="#F8F7F3" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M124 350H566V413C566 457 530 493 486 493H210C162 493 124 455 124 407V350Z" fill="#89A5E6"/>
+    <path d="M124 350H566V392H124V350Z" fill="#25888C" opacity="0.92"/>
+    <path d="M107 337H592" stroke="#D6B878" stroke-width="8" stroke-linecap="round" opacity="0.95"/>
+    <path d="M98 310H592C607 310 620 322 620 337C620 352 607 364 592 364H98C83 364 70 352 70 337C70 322 83 310 98 310Z" fill="#6F8FE0" stroke="#F8F7F3" stroke-width="14"/>
+    <path d="M101 323H588C596 323 602 329 602 337C602 345 596 351 588 351H101C93 351 87 345 87 337C87 329 93 323 101 323Z" fill="#4E9DA3"/>
+    <path d="M178 286H286C304 286 319 301 319 319V456C319 466 311 474 301 474H263C253 474 245 466 245 456V431H209C177 431 151 405 151 373V313C151 298 163 286 178 286Z" fill="#25888C" stroke="#F8F7F3" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M245 363V456C245 466 253 474 263 474H301C311 474 319 466 319 456V319C319 301 304 286 286 286H178" fill="#A7E3E4" opacity="0.35"/>
+    <path d="M232 346V365" stroke="#F8F7F3" stroke-width="13" stroke-linecap="round"/>
+    <path d="M319 359H503" stroke="#F8F7F3" stroke-width="13" stroke-linecap="round" opacity="0.95"/>
+    <path d="M552 359H590" stroke="#F8F7F3" stroke-width="13" stroke-linecap="round" opacity="0.95"/>
+    <path d="M134 423C137 446 150 463 169 471" stroke="#F8F7F3" stroke-width="13" stroke-linecap="round"/>
+    <path d="M178 475H190" stroke="#F8F7F3" stroke-width="13" stroke-linecap="round"/>
+    <path d="M365 493H486" stroke="#D6B878" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  </g>
 
-  <!-- Small accent line above -->
-  <line x1="24" y1="32" x2="108" y2="32" stroke="#4E9DA3" stroke-width="4" stroke-linecap="round"/>
-
-  <!-- Wordmark -->
-  <text x="20" y="88"
-        font-family="Montserrat, Arial, Helvetica, sans-serif"
-        font-size="72"
-        font-weight="800"
-        letter-spacing="1.2">
-    <tspan fill="#FFFFFF">Maison</tspan><tspan fill="#25888C">Tub</tspan>
+  <text x="286" y="160" font-family="Montserrat, Arial, sans-serif" font-size="102" font-weight="900" letter-spacing="-5.5" dominant-baseline="middle">
+    <tspan fill="#F8F7F3">Maison</tspan><tspan fill="#D6B878">Tub</tspan>
   </text>
 </svg>

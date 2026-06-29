@@ -609,14 +609,19 @@ p {
 .header__brand {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     flex: 0 0 auto;
-    gap: 14px;
-    min-width: 0;
+    gap: 0;
+    min-width: max-content;
+    line-height: 1;
 }
 
 .header__logo {
-    width: 310px;
+    display: block;
+    width: 210px;
+    max-width: 210px;
     height: auto;
+    object-fit: contain;
 }
 
 .header__nav {
@@ -892,13 +897,18 @@ p {
 }
 
 .mobile-menu__brand {
-    display: grid;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
 .mobile-menu__brand img {
-    width: min(320px, 86vw);
+    display: block;
+    width: 195px;
+    max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .mobile-menu__tagline {
@@ -1628,8 +1638,11 @@ p {
 }
 
 .footer__brand img {
+    display: block;
     width: 240px;
+    max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .footer__description {
@@ -1817,7 +1830,8 @@ p {
     }
 
     .header__logo {
-        width: 284px;
+        width: 190px;
+        max-width: 190px;
     }
 
     .header__nav {
@@ -1892,6 +1906,10 @@ p {
     .form-row {
         grid-template-columns: 1fr;
     }
+
+    .footer__brand img {
+        width: 225px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1946,7 +1964,8 @@ p {
     }
 
     .header__logo {
-        width: 260px;
+        width: 176px;
+        max-width: 176px;
     }
 
     .header-action {
@@ -2031,10 +2050,6 @@ p {
         padding-top: 52px;
     }
 
-    .footer__brand img {
-        width: 220px;
-    }
-
     .footer__bottom {
         flex-direction: column;
         align-items: flex-start;
@@ -2044,6 +2059,17 @@ p {
         right: 12px;
         bottom: 12px;
         width: calc(100vw - 24px);
+    }
+}
+
+@media (max-width: 640px) {
+    .header__logo {
+        width: 176px;
+        max-width: 176px;
+    }
+
+    .mobile-menu__brand img {
+        width: 184px;
     }
 }
 
@@ -2061,7 +2087,8 @@ p {
     }
 
     .header__logo {
-        width: 238px;
+        width: 164px;
+        max-width: 164px;
     }
 
     .header-action {
@@ -2103,7 +2130,7 @@ p {
     }
 
     .mobile-menu__brand img {
-        width: 250px;
+        width: 170px;
     }
 
     .mobile-menu__link {
